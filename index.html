@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapir Group — Strategic Advisory</title>
+    <meta name="description" content="Sapir Group provides strategic advisory services to founders, boards, and investors in hospitality, lifestyle, and founder-led brands globally.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root{--navy:#0a1628;--dark:#0f1d32;--slate:#1a2a44;--muted:#6b7a8d;--light:#c8cfd8;--warm:#b8a07e;--warm-light:#d4c4a8;--white:#f4f2ef;--pure-white:#fff}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;font-size:16px}body{font-family:'Inter',-apple-system,sans-serif;background:var(--pure-white);color:var(--navy);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;letter-spacing:-.01em}nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;transition:all .4s ease;background:transparent}nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:1rem 4rem;box-shadow:0 1px 0 rgba(10,22,40,.06)}.nav-logo{font-family:'EB Garamond',Georgia,serif;font-size:1.5rem;font-weight:500;color:var(--pure-white);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .4s ease}nav.scrolled .nav-logo{color:var(--navy)}.nav-links{display:flex;gap:2.5rem;list-style:none}.nav-links a{font-size:.8rem;font-weight:400;color:rgba(255,255,255,.7);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .3s ease}nav.scrolled .nav-links a{color:var(--muted)}.nav-links a:hover{color:var(--pure-white)}nav.scrolled .nav-links a:hover{color:var(--navy)}.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem}.nav-toggle span{display:block;width:24px;height:1.5px;background:var(--pure-white);margin:6px 0;transition:all .3s ease}nav.scrolled .nav-toggle span{background:var(--navy)}.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;justify-content:center;padding:6rem 4rem;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 50%,rgba(26,42,68,.8) 0%,var(--navy) 70%)}.hero-content{position:relative;max-width:800px;text-align:center}.hero-eyebrow{font-size:.75rem;font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:var(--warm);margin-bottom:2.5rem}.hero h1{font-size:clamp(2.5rem,5vw,4rem);color:var(--pure-white);line-height:1.15;margin-bottom:2rem}.hero-sub{font-size:1.15rem;color:var(--light);max-width:580px;margin:0 auto 3rem;line-height:1.8;font-weight:300}.hero-cta{display:inline-block;font-size:.75rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);text-decoration:none;border:1px solid rgba(184,160,126,.3);padding:1rem 2.5rem;transition:all .4s ease}.hero-cta:hover{background:rgba(184,160,126,.1);border-color:var(--warm)}section{padding:7rem 4rem}.section-inner{max-width:1100px;margin:0 auto}.section-label{font-size:.7rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--warm);margin-bottom:1.5rem}.section-heading{font-size:clamp(2rem,3.5vw,2.8rem);color:var(--navy);margin-bottom:1.5rem;line-height:1.2}.section-intro{font-size:1.05rem;color:var(--muted);max-width:620px;line-height:1.85;margin-bottom:4rem}.about{background:var(--pure-white)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}.about-text p{font-size:1.05rem;color:#3a4a5c;line-height:1.9;margin-bottom:1.5rem}.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;padding-top:1rem}.stat{border-top:1px solid rgba(10,22,40,.08);padding-top:1.5rem}.stat-number{font-family:'EB Garamond',Georgia,serif;font-size:2.5rem;color:var(--navy);font-weight:400;line-height:1;margin-bottom:.5rem}.stat-label{font-size:.8rem;color:var(--muted);letter-spacing:.03em;line-height:1.5}.services{background:var(--white)}.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(10,22,40,.06);border:1px solid rgba(10,22,40,.06)}.service-card{background:var(--white);padding:3rem;transition:background .4s ease}.service-card:hover{background:var(--pure-white)}.service-number{font-family:'EB Garamond',Georgia,serif;font-size:1rem;color:var(--warm);margin-bottom:1.5rem}.service-card h3{font-size:1.4rem;color:var(--navy);margin-bottom:1rem;line-height:1.3}.service-card p{font-size:.95rem;color:var(--muted);line-height:1.8}.sectors{background:var(--navy);color:var(--pure-white)}.sectors .section-heading{color:var(--pure-white)}.sectors .section-intro{color:var(--light)}.sector-list{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem}.sector-item{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem}.sector-item h4{font-size:1.2rem;color:var(--pure-white);margin-bottom:.75rem}.sector-item p{font-size:.9rem;color:var(--light);line-height:1.7}.approach{background:var(--pure-white)}.approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4rem}.approach-item{position:relative}.approach-item::before{content:'';display:block;width:32px;height:1px;background:var(--warm);margin-bottom:1.5rem}.approach-item h4{font-size:1.15rem;color:var(--navy);margin-bottom:.75rem}.approach-item p{font-size:.95rem;color:var(--muted);line-height:1.8}.contact{background:var(--white);text-align:center}.contact .section-inner{max-width:600px}.contact .section-heading{margin-bottom:1.5rem}.contact-text{font-size:1.05rem;color:var(--muted);line-height:1.85;margin-bottom:3rem}.contact-email{font-family:'EB Garamond',Georgia,serif;font-size:1.5rem;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(10,22,40,.15);padding-bottom:4px;transition:border-color .3s ease}.contact-email:hover{border-color:var(--warm)}.contact-location{margin-top:3rem;font-size:.8rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}footer{background:var(--navy);padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center}.footer-logo{font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:500;color:var(--pure-white);letter-spacing:.08em;text-transform:uppercase}.footer-text{font-size:.75rem;color:var(--muted);letter-spacing:.03em}.fade-in{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}.fade-in.visible{opacity:1;transform:translateY(0)}@media(max-width:900px){nav{padding:1.25rem 2rem}nav.scrolled{padding:1rem 2rem}.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy);flex-direction:column;align-items:center;justify-content:center;gap:2rem}.nav-links.open{display:flex}.nav-links.open a{color:rgba(255,255,255,.7);font-size:1rem}.nav-links.open a:hover{color:var(--pure-white)}.nav-toggle{display:block;z-index:200}section{padding:5rem 2rem}.hero{padding:6rem 2rem}.about-grid{grid-template-columns:1fr;gap:3rem}.services-grid{grid-template-columns:1fr}.sector-list{grid-template-columns:1fr;gap:2rem}.approach-grid{grid-template-columns:1fr;gap:3rem}footer{flex-direction:column;gap:1rem;text-align:center;padding:2.5rem 2rem}}
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#" class="nav-logo">Sapir Group</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Advisory</a></li>
+            <li><a href="#sectors">Sectors</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">Strategic Advisory</p>
+            <h1>We help founders and boards scale globally</h1>
+            <p class="hero-sub">Sapir Group is a strategic advisory practice working with founders, CEOs, and investors to navigate international growth, capital strategy, and operational transformation.</p>
+            <a href="#contact" class="hero-cta">Start a conversation</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <p class="section-label">Who We Are</p>
+                    <h2 class="section-heading">Built on decades of operating experience</h2>
+                    <p>We are a London-based advisory group with deep roots in strategy, finance, and operations. Our team brings firsthand experience as founding executives, CFOs, and chief strategy officers within high-growth, founder-led businesses.</p>
+                    <p>We understand what it takes to scale because we have done it — building corporate frameworks from zero, leading complex fundraises, restructuring organisations for global expansion, and sitting on the boards that make the critical decisions.</p>
+                    <p>That operating perspective shapes every engagement. We do not advise from the outside — we work alongside leadership as an extension of the team.</p>
+                </div>
+                <div class="about-stats fade-in">
+                    <div class="stat"><div class="stat-number">20+</div><div class="stat-label">Years of executive experience across strategy, finance, and operations</div></div>
+                    <div class="stat"><div class="stat-number">$750M+</div><div class="stat-label">Capital raised across equity and debt transactions</div></div>
+                    <div class="stat"><div class="stat-number">15+</div><div class="stat-label">Markets entered across four continents</div></div>
+                    <div class="stat"><div class="stat-number">4</div><div class="stat-label">Languages spoken across the team</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="section-inner">
+            <p class="section-label fade-in">What We Do</p>
+            <h2 class="section-heading fade-in">Advisory Services</h2>
+            <p class="section-intro fade-in">We advise at the intersection of strategy, capital, and execution — where the most consequential decisions are made.</p>
+            <div class="services-grid fade-in">
+                <div class="service-card"><div class="service-number">01</div><h3>Strategic Growth &amp; Global Expansion</h3><p>Market entry strategy, international scaling roadmaps, and operational build-out for brands expanding into new territories. We ensure cultural and commercial integrity is maintained at every stage of growth.</p></div>
+                <div class="service-card"><div class="service-number">02</div><h3>Capital Strategy &amp; Investor Relations</h3><p>Fundraising strategy, investor communications, and transaction execution across equity and debt. We manage the full capital lifecycle — from early-stage raises through complex restructurings and M&amp;A.</p></div>
+                <div class="service-card"><div class="service-number">03</div><h3>Founder Partnership &amp; Governance</h3><p>Board-level guidance for founder-led businesses navigating the transition from entrepreneurial energy to institutional rigour. We implement the governance, reporting cadence, and controls that enable sustainable scaling.</p></div>
+                <div class="service-card"><div class="service-number">04</div><h3>Operational Transformation</h3><p>Corporate restructuring, leadership team design, and process architecture for businesses at inflection points. We build the organisational frameworks that allow companies to operate at the next level of scale.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="sectors" id="sectors">
+        <div class="section-inner">
+            <p class="section-label fade-in">Sectors</p>
+            <h2 class="section-heading fade-in">Where we operate</h2>
+            <p class="section-intro fade-in">Our experience spans industries where brand, experience, and capital intersect.</p>
+            <div class="sector-list fade-in">
+                <div class="sector-item"><h4>Hospitality &amp; Lifestyle</h4><p>Hotels, F&amp;B, wellness, and experiential hospitality platforms — from concept through to multi-site global operations.</p></div>
+                <div class="sector-item"><h4>Real Estate &amp; Development</h4><p>Branded real estate, mixed-use developments, and hospitality-adjacent investment across established and emerging markets.</p></div>
+                <div class="sector-item"><h4>Founder-Led Brands</h4><p>Consumer and lifestyle brands built around a founder’s vision — navigating the unique challenges of scaling personal conviction into institutional value.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="approach" id="approach">
+        <div class="section-inner">
+            <p class="section-label fade-in">Our Approach</p>
+            <h2 class="section-heading fade-in">How we work</h2>
+            <p class="section-intro fade-in">We take a small number of engagements at any given time. Every client receives senior-level attention throughout.</p>
+            <div class="approach-grid fade-in">
+                <div class="approach-item"><h4>Principal Mindset</h4><p>We think like owners, not consultants. Every recommendation is grounded in what we would do if it were our capital and our reputation on the line.</p></div>
+                <div class="approach-item"><h4>Global Perspective</h4><p>Multilingual and multicultural, our team has lived and worked across the US, UK, Europe, the Middle East, and Russia. We navigate cross-border complexity as a matter of course.</p></div>
+                <div class="approach-item"><h4>Operator Experience</h4><p>We have sat in the seats our clients sit in — as CFOs, chief strategy officers, and founding executives. We advise from experience, not theory.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="section-inner fade-in">
+            <p class="section-label">Get in Touch</p>
+            <h2 class="section-heading">Let’s discuss how we can help</h2>
+            <p class="contact-text">We welcome conversations with founders, investors, and boards exploring strategic opportunities. Reach out to start a confidential discussion.</p>
+            <a href="mailto:info@sapir.group" class="contact-email">info@sapir.group</a>
+            <p class="contact-location">London  •  Global</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-logo">Sapir Group</div>
+        <div class="footer-text">© 2026 Sapir Group. All rights reserved.</div>
+    </footer>
+    <script>
+        const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>60)});const navToggle=document.getElementById('navToggle');const navLinks=document.getElementById('navLinks');navToggle.addEventListener('click',()=>{navLinks.classList.toggle('open')});navLinks.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>navLinks.classList.remove('open'))});const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.15});document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+    </script>
+</body>
+</html>
