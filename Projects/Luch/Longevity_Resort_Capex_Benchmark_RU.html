@@ -119,9 +119,14 @@ section:first-of-type{border-top:none}
 .filter-group{display:flex;flex-direction:column;gap:4px}
 .filter-group label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .filter-group select, .filter-group input{padding:10px 12px;font-family:'Inter',sans-serif;font-size:13px;border:1px solid var(--line);background:white;border-radius:3px;color:var(--ink);min-width:170px}
-#equipment-table .gridjs-table{font-family:'Inter',sans-serif !important;font-size:13px}
+#equipment-table{overflow-x:auto;-webkit-overflow-scrolling:touch}
+#equipment-table .gridjs-wrapper{overflow-x:auto;box-shadow:none}
+#equipment-table .gridjs-table{font-family:'Inter',sans-serif !important;font-size:13px;min-width:1140px;table-layout:fixed}
 #equipment-table th{background:var(--navy) !important;color:var(--cream) !important;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:14px 10px}
 #equipment-table td{padding:11px 10px;border-bottom:1px solid var(--line)}
+#equipment-table .gridjs-th{white-space:normal !important;word-break:break-word;overflow-wrap:break-word;line-height:1.25;vertical-align:top;padding:12px 8px;height:auto}
+#equipment-table .gridjs-th-content{white-space:normal !important;overflow:visible !important;text-overflow:clip !important}
+#equipment-table .gridjs-td{white-space:normal !important;word-break:break-word;overflow-wrap:break-word;vertical-align:top;line-height:1.45}
 .conf-pill{display:inline-block;padding:3px 8px;border-radius:10px;font-size:11px;font-weight:600}
 .conf-High{background:#dfeee5;color:var(--green)}
 .conf-Medium{background:#fbf3d8;color:#8c6e15}
@@ -244,7 +249,7 @@ footer .copy{margin-top:36px;border-top:1px solid rgba(212,185,136,0.18);padding
       <button class="topnav-link" data-target="regional">Регионы</button>
       <button class="topnav-link" data-target="methodology">Методология</button>
     </div>
-    <button class="topnav-print" onclick="window.print()">Печать / PDF</button>
+    <a class="topnav-print" href="Longevity_Resort_Capex_Benchmark_RU.pdf" download>PDF ↓</a>
   </div>
 </nav>
 
@@ -593,15 +598,15 @@ function buildGrid(){
     if(grid){ grid.updateConfig({data:rows}).forceRender(); return; }
     grid = new gridjs.Grid({
       columns:[
-        {name:'Позиция', sort:false, formatter:c=>gridjs.html(c)},
-        {name:'Категория'},
-        {name:'Уровень', formatter:c=>gridjs.html(c)},
-        {name:'Цена EU', sort:{compare:(a,b)=>{const pa=parseFloat((a||'').replace(/[^0-9]/g,''))||0;const pb=parseFloat((b||'').replace(/[^0-9]/g,''))||0;return pa-pb;}}},
-        {name:'Цена NA'},
-        {name:'Цена Россия'},
-        {name:'Кол-во'},
-        {name:'Доверие', formatter:c=>gridjs.html(c)},
-        {name:'Источник', formatter:c=>gridjs.html(c)}
+        {name:'Позиция', width:'280px', sort:false, formatter:c=>gridjs.html(c)},
+        {name:'Категория', width:'140px'},
+        {name:'Уровень', width:'130px', formatter:c=>gridjs.html(c)},
+        {name:'Цена EU', width:'110px', sort:{compare:(a,b)=>{const pa=parseFloat((a||'').replace(/[^0-9]/g,''))||0;const pb=parseFloat((b||'').replace(/[^0-9]/g,''))||0;return pa-pb;}}},
+        {name:'Цена NA', width:'110px'},
+        {name:'Цена Россия', width:'130px'},
+        {name:'Кол-во', width:'70px'},
+        {name:'Доверие', width:'90px', formatter:c=>gridjs.html(c)},
+        {name:'Источник', width:'80px', formatter:c=>gridjs.html(c)}
       ],
       data:rows,
       pagination:{limit:15, summary:true},
@@ -818,34 +823,4 @@ document.querySelectorAll('.topnav-link').forEach(b=>{
     if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
   });
 });
-const sectIds = ['overview','tiers','equipment','payback','regional','methodology'];
-const obs2 = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      document.querySelectorAll('.topnav-link').forEach(l=>l.classList.toggle('active', l.dataset.target===e.target.id));
-    }
-  });
-}, {rootMargin:'-40% 0px -50% 0px', threshold:0});
-sectIds.forEach(id=>{const el=document.getElementById(id); if(el) obs2.observe(el);});
-
-// reveal observer
-const obs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold:0.1});
-
-// =========== INIT ===========
-window.addEventListener('DOMContentLoaded', ()=>{
-  renderTierCards();
-  renderTierChart('eu_eur');
-  buildGrid();
-  renderProcs();
-  renderPackages();
-  renderPaybackChart();
-  renderPackagePie();
-  renderRegions();
-  renderSources();
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-});
-</script>
-</body>
-</html>
+const sectIds = ['overview','tiers','equipment','payback','regional','m
