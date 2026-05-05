@@ -3166,6 +3166,21 @@ document.querySelectorAll('input.eq-search').forEach(function(inp){ inp.addEvent
 // Reveal-on-scroll
 const io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if (en.isIntersecting) en.target.classList.add('in'); }); }, {threshold: 0.1});
 document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+// Topnav scroll: clicking a .topnav-link smooth-scrolls to the section by data-target
+document.querySelectorAll('.topnav-link').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var id = btn.dataset.target;
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    var nav = document.querySelector('.topnav');
+    var offset = nav ? nav.getBoundingClientRect().height + 8 : 0;
+    var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({top: top, behavior: 'smooth'});
+    document.querySelectorAll('.topnav-link').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+  });
+});
 </script>
 </body>
 </html>
