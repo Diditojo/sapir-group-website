@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Премиум longevity, резорт, оборудование, биология, программы, CapEx</title>
+<title>Премиум longevity-резорт · оборудование, биология, программы, CapEx</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,11 +12,11 @@
 
 <style>
 :root{
-  --navy:#0e1f2c; --navy-2:#16314a; --forest:#1f4030; --forest-2:#2d5b46;
-  --cream:#f6f1e7; --cream-2:#ece4d2; --paper:#fbf8f1; --gold:#b78e4c;
-  --gold-soft:#d4b988; --ink:#1a1a1a; --ink-2:#3a3a3a; --muted:#6e6e6e;
-  --line:#d8d2c2; --green:#3e7c5f; --yellow:#c9a227; --orange:#c66b2d;
-  --grey:#8a8a8a; --plum:#5a3050; --teal:#1f5b6b;
+ --navy:#1d3a2e; --navy-2:#2d5b46; --forest:#1f4030; --forest-2:#2d5b46;
+ --cream:#f6f1e7; --cream-2:#ece4d2; --paper:#fbf8f1; --gold:#b78e4c;
+ --gold-soft:#d4b988; --ink:#1a1a1a; --ink-2:#3a3a3a; --muted:#6e6e6e;
+ --line:#d8d2c2; --green:#3e7c5f; --yellow:#c9a227; --orange:#c66b2d;
+ --grey:#8a8a8a; --plum:#5a3050; --teal:#1f5b6b;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -30,20 +30,23 @@ a{color:var(--forest-2);text-decoration:none;border-bottom:1px solid var(--gold-
 a:hover{color:var(--gold)}
 .container{max-width:1280px;margin:0 auto;padding:0 36px}
 .eyebrow{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px}
-.topnav{position:sticky;top:0;z-index:100;background:rgba(14,31,44,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(183,142,76,0.25)}
+.topnav{position:sticky;top:0;z-index:100;background:rgba(10,30,20,0.98);backdrop-filter:blur(8px);border-bottom:1px solid rgba(183,142,76,0.25)}
 .topnav-inner{max-width:1280px;margin:0 auto;padding:14px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .topnav-logo{font-family:'Cormorant Garamond',serif;color:var(--cream);font-size:18px;font-weight:600}
-.topnav-logo .accent{color:var(--gold)}
+.topnav-logo.accent{color:var(--gold)}
 .topnav-links{display:flex;gap:2px;flex-wrap:wrap}
-.topnav-link{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--cream-2);padding:6px 9px;border-radius:3px;cursor:pointer;border:none;background:transparent;font-family:'Inter',sans-serif;transition:all .15s ease}
+.topnav-link{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--cream-2);padding:6px 9px;border-radius:3px;cursor:pointer;border:none;background:transparent;font-family:'Inter',sans-serif;transition:all.15s ease}
 .topnav-link:hover{color:var(--gold);background:rgba(183,142,76,0.08)}
 .topnav-link.active{color:var(--gold);background:rgba(183,142,76,0.12)}
 .topnav-print{font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:var(--gold);color:var(--navy);padding:8px 14px;border:none;border-radius:3px;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600}
 .topnav-print:hover{background:var(--gold-soft)}
+.topnav-print{display:inline-block;text-decoration:none;line-height:1.3}
+.topnav-xlsx{background:var(--forest);color:var(--cream)}
+.topnav-xlsx:hover{background:var(--forest-2);color:var(--cream)}
 .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,var(--forest) 100%);color:var(--cream);padding:120px 0 90px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(183,142,76,0.18) 0%,transparent 50%);pointer-events:none}
 .hero h1{color:var(--cream)}
-.hero .eyebrow{color:var(--gold-soft)}
+.hero.eyebrow{color:var(--gold-soft)}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--cream-2);max-width:920px;margin-top:18px;line-height:1.4;font-weight:400;font-style:italic}
 .hero-meta{margin-top:36px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft)}
 .kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:60px}
@@ -53,85 +56,85 @@ a:hover{color:var(--gold)}
 section{padding:90px 0;border-top:1px solid var(--line)}
 section:first-of-type{border-top:none}
 .section-eyebrow{display:flex;align-items:center;gap:18px;margin-bottom:8px}
-.section-eyebrow .num{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--gold);letter-spacing:.16em}
-.section-eyebrow .line{flex:0 0 30px;height:1px;background:var(--gold-soft)}
+.section-eyebrow.num{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--gold);letter-spacing:.16em}
+.section-eyebrow.line{flex:0 0 30px;height:1px;background:var(--gold-soft)}
 .lede{font-size:18px;line-height:1.65;color:var(--ink-2);max-width:920px;font-family:'Cormorant Garamond',serif;font-weight:400}
 .lede em{color:var(--forest);font-style:italic}
 .callout-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:28px 0 8px}
 .callout{padding:24px;background:var(--cream);border-left:3px solid var(--gold);border-radius:0 4px 4px 0}
-.callout .num{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--forest);font-weight:600;line-height:1}
-.callout .lab{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.callout.num{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--forest);font-weight:600;line-height:1}
+.callout.lab{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 .callout p{font-size:14px;margin:10px 0 0;color:var(--ink-2)}
 .tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
-.tier-card{background:white;border:1px solid var(--line);border-radius:6px;padding:32px 28px;position:relative;transition:transform .25s ease, box-shadow .25s ease}
-.tier-card:hover{transform:translateY(-4px);box-shadow:0 18px 48px -22px rgba(14,31,44,0.25)}
+.tier-card{background:white;border:1px solid var(--line);border-radius:6px;padding:32px 28px;position:relative;transition:transform.25s ease, box-shadow.25s ease}
+.tier-card:hover{transform:translateY(-4px);box-shadow:0 18px 48px -22px rgba(10,30,20,0.25)}
 .tier-card.tier-clp{border-top:4px solid var(--navy)}
 .tier-card.tier-sha{border-top:4px solid var(--forest)}
 .tier-card.tier-six{border-top:4px solid var(--gold)}
-.tier-card .badge{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--cream-2);color:var(--navy);padding:4px 10px;border-radius:2px;font-weight:600;margin-bottom:14px}
+.tier-card.badge{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--cream-2);color:var(--navy);padding:4px 10px;border-radius:2px;font-weight:600;margin-bottom:14px}
 .tier-card h3{font-size:24px;margin-bottom:6px}
-.tier-card .sub{font-size:13px;color:var(--muted);margin-bottom:20px}
-.tier-card .total{font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--navy);font-weight:600;line-height:1.1;margin:18px 0 4px}
-.tier-card .row{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px dashed var(--line);color:var(--ink-2)}
-.tier-card .row.total-row{border-bottom:none;border-top:2px solid var(--gold);font-weight:600;color:var(--navy);padding-top:12px;margin-top:8px}
-.tier-card .row span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+.tier-card.sub{font-size:13px;color:var(--muted);margin-bottom:20px}
+.tier-card.total{font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--navy);font-weight:600;line-height:1.1;margin:18px 0 4px}
+.tier-card.row{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px dashed var(--line);color:var(--ink-2)}
+.tier-card.row.total-row{border-bottom:none;border-top:2px solid var(--gold);font-weight:600;color:var(--navy);padding-top:12px;margin-top:8px}
+.tier-card.row span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
 /* pathway cards */
 .pathway-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
-.pathway-card{background:white;border:1px solid var(--line);border-top:3px solid var(--forest);border-radius:6px;padding:26px 24px;transition:all .25s ease}
-.pathway-card:hover{box-shadow:0 14px 40px -22px rgba(14,31,44,0.25);transform:translateY(-3px)}
-.pathway-card .symbol{font-size:32px;line-height:1;margin-bottom:10px;color:var(--gold)}
+.pathway-card{background:white;border:1px solid var(--line);border-top:3px solid var(--forest);border-radius:6px;padding:26px 24px;transition:all.25s ease}
+.pathway-card:hover{box-shadow:0 14px 40px -22px rgba(10,30,20,0.25);transform:translateY(-3px)}
+.pathway-card.symbol{font-size:32px;line-height:1;margin-bottom:10px;color:var(--gold)}
 .pathway-card h3{font-size:22px;margin-bottom:10px;color:var(--navy)}
 .pathway-card p{font-size:14px;line-height:1.55}
-.pathway-card .equip-count{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--cream);color:var(--forest);padding:5px 11px;border-radius:14px;font-weight:600;margin-top:10px}
+.pathway-card.equip-count{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--cream);color:var(--forest);padding:5px 11px;border-radius:14px;font-weight:600;margin-top:10px}
 .pathway-card ul{font-size:12.5px;color:var(--muted);margin:8px 0 0;padding-left:18px;line-height:1.5}
 /* hormesis stack table */
 .hormesis-table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--line);font-size:13px;margin-top:20px}
 .hormesis-table th{background:var(--navy);color:var(--cream);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:11px 12px;text-align:left;font-weight:600}
 .hormesis-table td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
 .hormesis-table tr:last-child td{border-bottom:none}
-.hormesis-table .grade-A{color:var(--green);font-weight:600}
-.hormesis-table .grade-B{color:var(--yellow);font-weight:600}
-.hormesis-table .grade-C{color:var(--orange);font-weight:600}
+.hormesis-table.grade-A{color:var(--green);font-weight:600}
+.hormesis-table.grade-B{color:var(--yellow);font-weight:600}
+.hormesis-table.grade-C{color:var(--orange);font-weight:600}
 /* biomarker bundle cards */
 .bundle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:30px 0 16px}
 .bundle-card{background:white;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:24px 22px;display:flex;flex-direction:column}
 .bundle-card h3{font-size:21px;color:var(--navy);margin-bottom:8px;font-family:'Cormorant Garamond',serif;font-weight:600}
-.bundle-card .price-block{margin:14px 0 10px}
-.bundle-card .price-eur{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--forest);font-weight:600;line-height:1}
-.bundle-card .price-rub{font-size:13px;color:var(--muted);margin-top:4px}
-.bundle-card .markers-list{margin-top:10px;display:flex;flex-wrap:wrap;gap:5px}
-.bundle-card .chip{background:var(--cream);color:var(--navy);font-size:10.5px;padding:3px 9px;border-radius:11px;line-height:1.4}
-.bundle-card .use-case{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-style:italic}
+.bundle-card.price-block{margin:14px 0 10px}
+.bundle-card.price-eur{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--forest);font-weight:600;line-height:1}
+.bundle-card.price-rub{font-size:13px;color:var(--muted);margin-top:4px}
+.bundle-card.markers-list{margin-top:10px;display:flex;flex-wrap:wrap;gap:5px}
+.bundle-card.chip{background:var(--cream);color:var(--navy);font-size:10.5px;padding:3px 9px;border-radius:11px;line-height:1.4}
+.bundle-card.use-case{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-style:italic}
 /* program cards */
 .program-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:32px}
-.program-card{background:white;border:1px solid var(--line);border-radius:8px;padding:32px 30px;border-top:4px solid var(--plum);box-shadow:0 6px 22px -16px rgba(14,31,44,.18)}
+.program-card{background:white;border:1px solid var(--line);border-radius:8px;padding:32px 30px;border-top:4px solid var(--plum);box-shadow:0 6px 22px -16px rgba(10,30,20,.18)}
 .program-card.p-renew{border-top-color:var(--forest)}
 .program-card.p-mito{border-top-color:var(--teal)}
 .program-card.p-inflam{border-top-color:var(--orange)}
 .program-card.p-epi{border-top-color:var(--plum)}
 .program-card h3{font-size:26px;color:var(--navy);margin-bottom:6px;font-family:'Cormorant Garamond',serif}
-.program-card .tag{font-style:italic;color:var(--forest);font-size:14px;margin-bottom:14px;line-height:1.4;font-family:'Cormorant Garamond',serif}
-.program-card .price-row{display:flex;justify-content:space-between;align-items:baseline;background:var(--cream);padding:14px 18px;border-radius:4px;margin:14px 0 10px}
-.program-card .price-eur{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--navy);font-weight:600}
-.program-card .price-rub{font-size:13px;color:var(--muted)}
-.program-card .meta-row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;font-size:13px;color:var(--ink-2);margin-top:12px}
-.program-card .meta-row .lab{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin-bottom:2px}
-.program-card .cm-row{display:flex;justify-content:space-between;font-size:13px;color:var(--forest);font-weight:600;background:#eef4ee;padding:10px 14px;border-radius:4px;margin-top:14px}
-.program-card .outcomes{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.5}
+.program-card.tag{font-style:italic;color:var(--forest);font-size:14px;margin-bottom:14px;line-height:1.4;font-family:'Cormorant Garamond',serif}
+.program-card.price-row{display:flex;justify-content:space-between;align-items:baseline;background:var(--cream);padding:14px 18px;border-radius:4px;margin:14px 0 10px}
+.program-card.price-eur{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--navy);font-weight:600}
+.program-card.price-rub{font-size:13px;color:var(--muted)}
+.program-card.meta-row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;font-size:13px;color:var(--ink-2);margin-top:12px}
+.program-card.meta-row.lab{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin-bottom:2px}
+.program-card.cm-row{display:flex;justify-content:space-between;font-size:13px;color:var(--forest);font-weight:600;background:#eef4ee;padding:10px 14px;border-radius:4px;margin-top:14px}
+.program-card.outcomes{font-size:13px;color:var(--ink-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.5}
 .revenue-callout{background:linear-gradient(120deg, var(--forest) 0%, var(--forest-2) 100%);color:var(--cream);padding:42px 38px;border-radius:8px;margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.revenue-callout .num{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-soft);font-weight:600;line-height:1.05}
-.revenue-callout .lab{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-2);margin-top:6px}
+.revenue-callout.num{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-soft);font-weight:600;line-height:1.05}
+.revenue-callout.lab{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-2);margin-top:6px}
 /* staffing FTE tiles */
 .fte-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
 .fte-card{background:white;border:1px solid var(--line);border-radius:6px;padding:30px 28px;border-top:3px solid var(--navy)}
 .fte-card.f-six{border-top-color:var(--gold)}
 .fte-card.f-sha{border-top-color:var(--forest)}
 .fte-card.f-clp{border-top-color:var(--navy)}
-.fte-card .fte-num{font-family:'Cormorant Garamond',serif;font-size:60px;color:var(--navy);font-weight:600;line-height:1}
-.fte-card .fte-lab{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-top:6px}
+.fte-card.fte-num{font-family:'Cormorant Garamond',serif;font-size:60px;color:var(--navy);font-weight:600;line-height:1}
+.fte-card.fte-lab{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-top:6px}
 .fte-card h4{margin-top:14px;font-size:18px}
-.fte-card .pay-row{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;color:var(--ink-2)}
-.fte-card .pay-row .v{font-weight:600;color:var(--navy);font-variant-numeric:tabular-nums}
+.fte-card.pay-row{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;color:var(--ink-2)}
+.fte-card.pay-row.v{font-weight:600;color:var(--navy);font-variant-numeric:tabular-nums}
 /* generic tables */
 .simple-table{width:100%;border-collapse:collapse;font-size:13px;background:white;border:1px solid var(--line);margin-top:20px}
 .simple-table th{background:var(--navy);color:var(--cream);text-align:left;padding:10px 12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
@@ -142,8 +145,8 @@ section:first-of-type{border-top:none}
 .info-callout strong{color:var(--navy)}
 /* Grid.js wrapper styling */
 #equipmentGrid table.gridjs-table{font-size:12.5px}
-#equipmentGrid .gridjs-th{background:var(--navy);color:var(--cream);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:9px 10px}
-#equipmentGrid .gridjs-td{padding:9px 10px;vertical-align:top}
+#equipmentGrid.gridjs-th{background:var(--navy);color:var(--cream);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:9px 10px}
+#equipmentGrid.gridjs-td{padding:9px 10px;vertical-align:top}
 .tier-cell{font-weight:600}
 .tier-cell.tier-clp{color:var(--navy)}
 .tier-cell.tier-sha{color:var(--forest)}
@@ -156,20 +159,20 @@ section:first-of-type{border-top:none}
 .horm-no{color:var(--muted);font-size:13px}
 /* footer */
 footer{background:var(--navy);color:var(--cream-2);padding:54px 0 30px;border-top:none}
-footer .container{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;align-items:start}
+footer.container{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;align-items:start}
 footer h4{color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:22px;margin-bottom:12px}
 footer p{color:var(--cream-2);font-size:14px;line-height:1.6}
-footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding-top:20px;font-size:12px;color:var(--gold-soft);letter-spacing:.1em}
+footer.meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding-top:20px;font-size:12px;color:var(--gold-soft);letter-spacing:.1em}
 @media (max-width:980px){
-  .kpi-row{grid-template-columns:repeat(2,1fr)}
-  .pathway-grid,.bundle-grid,.program-grid,.tier-grid,.fte-grid{grid-template-columns:1fr}
-  .revenue-callout{grid-template-columns:repeat(2,1fr)}
-  h1{font-size:42px}
-  h2{font-size:30px}
+.kpi-row{grid-template-columns:repeat(2,1fr)}
+.pathway-grid,.bundle-grid,.program-grid,.tier-grid,.fte-grid{grid-template-columns:1fr}
+.revenue-callout{grid-template-columns:repeat(2,1fr)}
+ h1{font-size:42px}
+ h2{font-size:30px}
 }
 @media print{
-  .topnav,.topnav-print{display:none}
-  section{padding:30px 0;page-break-inside:avoid}
+.topnav,.topnav-print,.topnav-xlsx{display:none}
+ section{padding:30px 0;page-break-inside:avoid}
 }
 </style>
 
@@ -177,39 +180,39 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 /* Static tables for equipment, biomarkers, staffing -- replaced Grid.js for reliability */
 .eq-static-wrap { width: 100%; margin: 12px 0 24px 0; }
 .eq-search { width: 320px; max-width: 100%; padding: 8px 12px; border: 1px solid #c8c8c8; border-radius: 4px; margin-bottom: 10px; font-size: 13px; font-family: inherit; }
-.eq-search:focus { outline: none; border-color: var(--navy, #0e1f2c); }
+.eq-search:focus { outline: none; border-color: var(--navy, #1d3a2e); }
 .eq-static-table { width: 100%; border-collapse: collapse; font-size: 12px; line-height: 1.4; table-layout: auto; }
-.eq-static-table thead { background: var(--navy, #0e1f2c); color: #fff; }
+.eq-static-table thead { background: var(--navy, #1d3a2e); color: #fff; }
 .eq-static-table thead th { padding: 8px 10px; text-align: left; font-weight: 600; font-size: 11px; vertical-align: top; border: 1px solid #1f2f3c; }
 .eq-static-table tbody td { padding: 8px 10px; border: 1px solid #e2e2e2; vertical-align: top; word-wrap: break-word; }
 .eq-static-table tbody tr:nth-child(even) { background: #fafafa; }
 .eq-static-table tbody tr:hover { background: #f0f4f7; }
-.eq-static-table .eq-num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.eq-static-table .eq-ctr { text-align: center; }
-.eq-pchip { display: inline-block; background: #eef3f7; padding: 1px 6px; border-radius: 3px; margin: 1px 2px 1px 0; font-size: 10px; color: #0e1f2c; white-space: nowrap; }
+.eq-static-table.eq-num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.eq-static-table.eq-ctr { text-align: center; }
+.eq-pchip { display: inline-block; background: #eef3f7; padding: 1px 6px; border-radius: 3px; margin: 1px 2px 1px 0; font-size: 10px; color: #1d3a2e; white-space: nowrap; }
 .eq-evid { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; cursor: help; color: #fff; min-width: 18px; text-align: center; }
 .eq-evid-A { background: #1b8a4a; }
 .eq-evid-B { background: #c87a00; }
 .eq-evid-C { background: #c43a3a; }
-.eq-tier-tag { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 3px; background: #eef3f7; color: #0e1f2c; white-space: nowrap; }
+.eq-tier-tag { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 3px; background: #eef3f7; color: #1d3a2e; white-space: nowrap; }
 .eq-yes { color: #1b8a4a; font-weight: 700; font-size: 15px; }
 .eq-no { color: #ccc; font-weight: 400; }
 /* Equipment table is wide; allow horizontal scroll on small screens */
 .eq-static-wrap { overflow-x: auto; }
-.bm-static-table .eq-num { min-width: 60px; }
+.bm-static-table.eq-num { min-width: 60px; }
 .st-static-table td { font-size: 12px; }
 @media (max-width: 900px) {
-  .eq-static-table { font-size: 10.5px; }
-  .eq-static-table thead th, .eq-static-table tbody td { padding: 5px 6px; }
+.eq-static-table { font-size: 10.5px; }
+.eq-static-table thead th,.eq-static-table tbody td { padding: 5px 6px; }
 }
 </style>
 </head>
 <body>
 
 <nav class="topnav">
-  <div class="topnav-inner">
-    <div class="topnav-logo">Sapir <span class="accent">Group</span></div>
-    <div class="topnav-links"><button class="topnav-link" data-target="overview">ОБЗОР</button>
+ <div class="topnav-inner">
+ <div class="topnav-logo">Longevity <span class="accent">Сысерть</span></div>
+ <div class="topnav-links"><button class="topnav-link" data-target="overview">ОБЗОР</button>
 <button class="topnav-link" data-target="summary">РЕЗЮМЕ</button>
 <button class="topnav-link" data-target="biology">БИОЛОГИЯ</button>
 <button class="topnav-link" data-target="hormesis">ГОРМЕЗИС</button>
@@ -221,253 +224,254 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <button class="topnav-link" data-target="payback">ОКУПАЕМОСТЬ</button>
 <button class="topnav-link" data-target="regional">РЕГИОНЫ</button>
 <button class="topnav-link" data-target="methodology">МЕТОДОЛОГИЯ</button></div>
-    <button class="topnav-print" onclick="window.print()">Скачать PDF</button>
-  </div>
+ <a class="topnav-print" href="Longevity_Resort_Capex_Benchmark_RU.pdf" download>Скачать PDF</a>
+ <a class="topnav-print topnav-xlsx" href="Longevity_Resort_Capex_Benchmark_RU.xlsx" download>Скачать Excel</a>
+ </div>
 </nav>
 <section class="hero" id="overview" style="border-top:none">
-  <div class="container">
-    <div class="eyebrow reveal">Стратегический инвестиционный обзор, май 2026</div>
-    <h1 class="reveal">Премиум longevity, резорт<br>на 90 номеров, Сысерть</h1>
-    <p class="hero-sub reveal">Биологически обоснованная операционная модель, опирающаяся на пути активации клетки, стек гормезиса, биомаркер, ный позвоночник и продуктовый слой из четырёх программ. CapEx, ориентиры от 5,8 до 13,7 млн EUR, выручка программ 27 млн EUR на пятый год.</p>
-    <div class="hero-meta reveal">90 ключей, Свердловская обл. РФ, FX 92 RUB/EUR</div>
-    <div class="kpi-row reveal">
-      <div class="kpi"><div class="kpi-num">134</div><div class="kpi-label">строки оборудования</div></div>
-      <div class="kpi"><div class="kpi-num">56</div><div class="kpi-label">источников</div></div>
-      <div class="kpi"><div class="kpi-num">€13,7M</div><div class="kpi-label">максимальный CapEx</div></div>
-      <div class="kpi"><div class="kpi-num">4</div><div class="kpi-label">продуктовые программы</div></div>
-      <div class="kpi"><div class="kpi-num">€27M</div><div class="kpi-label">выручка программ, год 5</div></div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="eyebrow reveal">Стратегический инвестиционный обзор, май 2026</div>
+ <h1 class="reveal">Премиум longevity-резорт<br>на 90 номеров · Сысерть</h1>
+ <p class="hero-sub reveal">Биологически обоснованная операционная модель, опирающаяся на пути активации клетки, стек гормезиса и биомаркерный позвоночник и продуктовый слой из четырёх программ. CapEx-ориентиры от 5,8 до 13,7 млн EUR, выручка программ 27 млн EUR на пятый год.</p>
+ <div class="hero-meta reveal">90 ключей, Свердловская обл. РФ, FX 92 RUB/EUR</div>
+ <div class="kpi-row reveal">
+ <div class="kpi"><div class="kpi-num">134</div><div class="kpi-label">строки оборудования</div></div>
+ <div class="kpi"><div class="kpi-num">56</div><div class="kpi-label">источников</div></div>
+ <div class="kpi"><div class="kpi-num">€13,7M</div><div class="kpi-label">максимальный CapEx</div></div>
+ <div class="kpi"><div class="kpi-num">4</div><div class="kpi-label">продуктовые программы</div></div>
+ <div class="kpi"><div class="kpi-num">€27M</div><div class="kpi-label">выручка программ, год 5</div></div>
+ </div>
+ </div>
 </section>
 <section id="summary">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">02, Резюме</div></div>
-    <h2 class="reveal">Капитальный план, откалиброванный на конкретный продукт</h2>
-    <p class="lede reveal">Документ устанавливает три жизнеспособных уровня капитального вложения для премиального longevity, резорта на 90 номеров. Каждый уровень увязан с биологически обоснованной операционной моделью: путями активации клетки, стеком гормезиса, биомаркер, ным позвоночником, четырьмя продуктовыми программами и квалифицированным клиническим персоналом. Подход следует логике Анны Бьюрстам (Six Senses, Raison d'Etre): операторы, которые выигрывают долгосрочную игру, строят оборудование, биомаркеры, программы и персонал вокруг клеточных путей, а не вокруг категорий оборудования.</p>
-    <div class="callout-grid reveal">
-      <div class="callout"><div class="num">€13,7M</div><div class="lab">CapEx, уровень Lanserhof / CLP</div><p>Полная медицинская инфраструктура с MRI 3T, CT 256, DEXA, CPET, PSG, IV, лаунж, NAD+ и стволовая лаборатория, банный комплекс премиум, 90, ключевая отельная база.</p></div>
-      <div class="callout"><div class="num">€6,6M</div><div class="lab">CapEx, уровень SHA / Chenot</div><p>Медицина среднего слоя: DEXA, CPET, PSG, IV, лаунж, IHHT, премиальная баня и сауна, кухня и IT идентичны премиум, уровню.</p></div>
-      <div class="callout"><div class="num">€5,8M</div><div class="lab">CapEx, уровень Six Senses Place</div><p>Wellness, плюс с longevity глубиной по биомаркер, рам: легкая медицина, баня, сауна, IHHT, IV, лаунж, спа, фитнес, рестораны.</p></div>
-    </div>
-    <p class="lede reveal" style="margin-top:34px">К капитальному вложению добавляется операционный слой: ежегодный фонд оплаты труда клинического персонала от 1,06 млн EUR (Six Senses) до 3,88 млн EUR (Lanserhof / CLP); прогноз выручки от четырёх продуктовых программ <em>27 млн EUR</em> (2,49 млрд RUB) на пятый год; средняя цена программы 21 100 EUR (1,94 млн RUB); 1 281 гость, программ ежегодно при загрузке 65 процентов.</p>
-  </div>
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">02, Резюме</div></div>
+ <h2 class="reveal">Капитальный план, откалиброванный на конкретный продукт</h2>
+ <p class="lede reveal">Документ устанавливает три жизнеспособных уровня капитального вложения для премиального longevity-резорта на 90 номеров. Каждый уровень увязан с биологически обоснованной операционной моделью: путями активации клетки, стеком гормезиса, биомаркерным позвоночником, четырьмя продуктовыми программами и квалифицированным клиническим персоналом. Подход следует логике Анны Бьюрстам (Six Senses, Raison d'Etre): операторы, которые выигрывают долгосрочную игру, строят оборудование, биомаркеры, программы и персонал вокруг клеточных путей, а не вокруг категорий оборудования.</p>
+ <div class="callout-grid reveal">
+ <div class="callout"><div class="num">€13,7M</div><div class="lab">CapEx, уровень Lanserhof / CLP</div><p>Полная медицинская инфраструктура с MRI 3T, CT 256, DEXA, CPET, PSG, IV, лаунж, NAD+ и стволовая лаборатория, банный комплекс премиум, 90, ключевая отельная база.</p></div>
+ <div class="callout"><div class="num">€6,6M</div><div class="lab">CapEx, уровень SHA / Chenot</div><p>Медицина среднего слоя: DEXA, CPET, PSG, IV, лаунж, IHHT, премиальная баня и сауна, кухня и IT идентичны премиум, уровню.</p></div>
+ <div class="callout"><div class="num">€5,8M</div><div class="lab">CapEx, уровень Six Senses Place</div><p>Wellness-плюс с longevity-глубиной по биомаркерам: легкая медицина, баня, сауна, IHHT, IV-лаунж, спа, фитнес, рестораны.</p></div>
+ </div>
+ <p class="lede reveal" style="margin-top:34px">К капитальному вложению добавляется операционный слой: ежегодный фонд оплаты труда клинического персонала от 1,06 млн EUR (Six Senses) до 3,88 млн EUR (Lanserhof / CLP); прогноз выручки от четырёх продуктовых программ <em>27 млн EUR</em> (2,49 млрд RUB) на пятый год; средняя цена программы 21 100 EUR (1,94 млн RUB); 1 281 гость, программ ежегодно при загрузке 65 процентов.</p>
+ </div>
 </section>
 <section id="biology">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">03, Биология долголетия</div></div>
-    <h2 class="reveal">Биология долголетия, фундамент позиционирования</h2>
-    <p class="lede reveal">Долголетие, это биология, а не велнес, эстетика. Анна Бьюрстам (старший советник Six Senses, основатель Raison d'Etre) формулирует задачу прямо: оператор, который выигрывает в категории longevity, строит свою операционную модель вокруг <em>клеточных путей</em>: аутофагии, NAD+, AMPK, mTOR, очищения от стареющих клеток и гормезиса. Оборудование, биомаркеры, специалисты и продукты выравниваются под эту биологию. Это позиционирование, которое мы рекомендуем для Сысертского проекта.</p>
-    <div class="pathway-grid reveal">
-        <div class="pathway-card">
-          <div class="symbol">♻</div>
-          <h3>Аутофагия</h3>
-          <p>Утилизация повреждённых органелл и белков. Запускается ограничением калорий, времязависимым окном питания, продолжительной аэробной нагрузкой и сауной (heat shock proteins).</p>
-          <ul><li>Опорное оборудование: Питающее окно, баня и сауна, кардио, длинные посты</li></ul>
-          <div class="equip-count">0 позиций в реестре</div>
-        </div>
-        <div class="pathway-card">
-          <div class="symbol">⚡</div>
-          <h3>Поддержка NAD+</h3>
-          <p>Восстановление кофермента, который падает с возрастом и питает митохондрии и сиртуины. NAD+ инфузии, NMN/NR per os, сон, физкультура.</p>
-          <ul><li>Опорное оборудование: IV, лаунж, NAD+ протоколы, сон, лаборатория</li></ul>
-          <div class="equip-count">0 позиций в реестре</div>
-        </div>
-        <div class="pathway-card">
-          <div class="symbol">△</div>
-          <h3>Активация AMPK</h3>
-          <p>Сенсор энергетического дефицита: запускает аутофагию и митохондриогенез. Активируется голоданием, тренировками с ограничением гликогена, метформином, баней.</p>
-          <ul><li>Опорное оборудование: Кардио и силовые, баня, сауна, IHHT, ограничение калорий</li></ul>
-          <div class="equip-count">15 позиций в реестре</div>
-        </div>
-        <div class="pathway-card">
-          <div class="symbol">⊕</div>
-          <h3>Модуляция mTOR</h3>
-          <p>Ключ к синтезу белка и восстановлению. Цель: чередовать состояния mTOR, on (после силовой / белок) и mTOR, off (пост, рапамицин у избранных).</p>
-          <ul><li>Опорное оборудование: Силовая зона, протеин, нацеленные диетические окна</li></ul>
-          <div class="equip-count">8 позиций в реестре</div>
-        </div>
-        <div class="pathway-card">
-          <div class="symbol">✕</div>
-          <h3>Очищение от стареющих клеток</h3>
-          <p>Удаление зомби, клеток, выделяющих провоспалительный SASP. Сенолитики (квартетин, физетин, дазатиниб у врача), физическая нагрузка, IHHT.</p>
-          <ul><li>Опорное оборудование: Сенолитические протоколы, IHHT, ВИИТ, силовая</li></ul>
-          <div class="equip-count">2 позиций в реестре</div>
-        </div>
-        <div class="pathway-card">
-          <div class="symbol">∿</div>
-          <h3>Гормезис</h3>
-          <p>Малая управляемая стрессовая нагрузка на клетку: тепло, холод, гипоксия, голодание, нагрузка. Активирует Nrf2, FOXO, AMPK. Стержень всей операционной модели.</p>
-          <ul><li>Опорное оборудование: Баня, сауна, ICE, plunge, IHHT, ВИИТ, силовая, посты</li></ul>
-          <div class="equip-count">21 позиций в реестре</div>
-        </div></div>
-    <p style="font-size:13px;color:var(--muted);margin-top:22px;font-style:italic">Источник идеи: Anna Bjurstam, Wellness Pillars, Raison d'Etre, методические презентации 2022 и 2024 годов; Six Senses Place: Bali launch 2024; David Sinclair, Lifespan, 2019; Valter Longo, The Longevity Diet, 2018; Eric Verdin, Buck Institute, пресс-материалы 2023.</p>
-  </div>
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">03, Биология долголетия</div></div>
+ <h2 class="reveal">Биология долголетия, фундамент позиционирования</h2>
+ <p class="lede reveal">Долголетие, это биология, а не велнес-эстетика. Анна Бьюрстам (старший советник Six Senses, основатель Raison d'Etre) формулирует задачу прямо: оператор, который выигрывает в категории longevity, строит свою операционную модель вокруг <em>клеточных путей</em>: аутофагии, NAD+, AMPK, mTOR, очищения от стареющих клеток и гормезиса. Оборудование, биомаркеры, специалисты и продукты выравниваются под эту биологию. Это позиционирование, которое мы рекомендуем для Сысертского проекта.</p>
+ <div class="pathway-grid reveal">
+ <div class="pathway-card">
+ <div class="symbol">♻</div>
+ <h3>Аутофагия</h3>
+ <p>Утилизация повреждённых органелл и белков. Запускается ограничением калорий, времязависимым окном питания, продолжительной аэробной нагрузкой и сауной (heat shock proteins).</p>
+ <ul><li>Опорное оборудование: Питающее окно, баня и сауна, кардио, длинные посты</li></ul>
+ <div class="equip-count">0 позиций в реестре</div>
+ </div>
+ <div class="pathway-card">
+ <div class="symbol">⚡</div>
+ <h3>Поддержка NAD+</h3>
+ <p>Восстановление кофермента, который падает с возрастом и питает митохондрии и сиртуины. NAD+ инфузии, NMN/NR per os, сон, физкультура.</p>
+ <ul><li>Опорное оборудование: IV, лаунж, NAD+ протоколы, сон, лаборатория</li></ul>
+ <div class="equip-count">0 позиций в реестре</div>
+ </div>
+ <div class="pathway-card">
+ <div class="symbol">△</div>
+ <h3>Активация AMPK</h3>
+ <p>Сенсор энергетического дефицита: запускает аутофагию и митохондриогенез. Активируется голоданием, тренировками с ограничением гликогена, метформином, баней.</p>
+ <ul><li>Опорное оборудование: Кардио и силовые, баня, сауна, IHHT, ограничение калорий</li></ul>
+ <div class="equip-count">15 позиций в реестре</div>
+ </div>
+ <div class="pathway-card">
+ <div class="symbol">⊕</div>
+ <h3>Модуляция mTOR</h3>
+ <p>Ключ к синтезу белка и восстановлению. Цель: чередовать состояния mTOR-on (после силовой / белок) и mTOR-off (пост-рапамицин у избранных).</p>
+ <ul><li>Опорное оборудование: Силовая зона, протеин, нацеленные диетические окна</li></ul>
+ <div class="equip-count">8 позиций в реестре</div>
+ </div>
+ <div class="pathway-card">
+ <div class="symbol">✕</div>
+ <h3>Очищение от стареющих клеток</h3>
+ <p>Удаление зомби, клеток, выделяющих провоспалительный SASP. Сенолитики (квартетин, физетин, дазатиниб у врача), физическая нагрузка, IHHT.</p>
+ <ul><li>Опорное оборудование: Сенолитические протоколы, IHHT, ВИИТ, силовая</li></ul>
+ <div class="equip-count">2 позиций в реестре</div>
+ </div>
+ <div class="pathway-card">
+ <div class="symbol">∿</div>
+ <h3>Гормезис</h3>
+ <p>Малая управляемая стрессовая нагрузка на клетку: тепло, холод, гипоксия, голодание, нагрузка. Активирует Nrf2, FOXO, AMPK. Стержень всей операционной модели.</p>
+ <ul><li>Опорное оборудование: баня, сауна, ice-plunge, IHHT, ВИИТ, силовая, посты</li></ul>
+ <div class="equip-count">21 позиций в реестре</div>
+ </div></div>
+ <p style="font-size:13px;color:var(--muted);margin-top:22px;font-style:italic">Источник идеи: Anna Bjurstam, Wellness Pillars, Raison d'Etre, методические презентации 2022 и 2024 годов; Six Senses Place: Bali launch 2024; David Sinclair, Lifespan, 2019; Valter Longo, The Longevity Diet, 2018; Eric Verdin, Buck Institute, пресс-материалы 2023.</p>
+ </div>
 </section>
 <section id="hormesis">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">04, Стек гормезиса</div></div>
-    <h2 class="reveal">Стек гормезиса, ядро операционной модели</h2>
-    <p class="lede reveal">Стек гормезиса, это управляемая дозировка стрессовых стимулов на клетку: тепло, холод, гипоксия, голодание, физическая нагрузка. Биологический ответ универсален: запуск Nrf2, FOXO, AMPK, sirtuins, рост митохондриальной плотности и противовоспалительная регуляция. На уровне резорта это дешёвый, ежедневный и узнаваемый продукт; именно он отличает longevity, оператора от сетевого спа. Стек ниже ссылается на 17 позиций из реестра оборудования (см. секцию 09).</p>
-    <table class="hormesis-table reveal">
-      <thead><tr><th>Компонент</th><th>Доза / протокол</th><th>Биологический механизм</th><th>Evidence</th></tr></thead>
-      <tbody><tr>
-          <td><strong>Аппарат IHHT ,  интервальная гипокси-гипероксическая тренировка</strong></td>
-          <td>4 цикла гипоксии 11% / гипероксии 36% за 40 мин, 2, 3 раза в неделю</td>
-          <td>HIF-1a, AMPK, митохондриогенез</td>
-          <td><span class="grade-B">B</span></td>
-        </tr><tr>
-          <td><strong>Хаммам / паровая (под ключ, премиальная плитка / мрамор)</strong></td>
-          <td>45, 50C влажный пар, 15, 20 мин</td>
-          <td>Heat shock proteins, противовоспаление</td>
-          <td><span class="grade-B">B</span></td>
-        </tr><tr>
-          <td><strong>Контур Кнейпа (контрастные ножные ванны)</strong></td>
-          <td>Кнайпп, ходьба, чередование 38C / 12C</td>
-          <td>Сосудистая тренировка, парасимпатикус</td>
-          <td><span class="grade-C">C</span></td>
-        </tr><tr>
-          <td><strong>Камера криосауны общего действия (электрическая, –85…–110 °C)</strong></td>
-          <td>, 110C, 3 минуты</td>
-          <td>Норадреналин, противовоспаление</td>
-          <td><span class="grade-B">B</span></td>
-        </tr><tr>
-          <td><strong>Премиум ИК-сауна (full-spectrum, на 3–4 человека)</strong></td>
-          <td>60C ИК, 30, 40 мин</td>
-          <td>HSP, аутофагия, AMPK</td>
-          <td><span class="grade-B">B</span></td>
-        </tr><tr>
-          <td><strong>Премиум финская сауна (коммерческая, на 8–12 человек, Klafs / Tylo)</strong></td>
-          <td>80, 90C, 15, 20 мин 4, 7 раз в неделю</td>
-          <td>HSP, BDNF, сердечно, сосудистая защита</td>
-          <td><span class="grade-A">A</span></td>
-        </tr><tr>
-          <td><strong>Премиум русская баня ,  парная (на дровах, бревенчатая, под ключ)</strong></td>
-          <td>По протоколу</td>
-          <td>Гормезис, ответ Nrf2 / FOXO / AMPK</td>
-          <td><span class="grade-B">B</span></td>
-        </tr><tr>
-          <td><strong>Чёрная баня (по-чёрному, традиционная)</strong></td>
-          <td>70, 80C, дымовая среда, ритуал</td>
-          <td>HSP, культурный гормезис, NRF2</td>
-          <td><span class="grade-C">C</span></td>
-        </tr><tr>
-          <td><strong>Вторая парилка («белая»), для увеличения пропускной способности</strong></td>
-          <td>80, 90C, дублирование пропускной способности</td>
-          <td>HSP, сердечно, сосудистая защита</td>
-          <td><span class="grade-A">A</span></td>
-        </tr><tr>
-          <td><strong>Купель с холодной водой (с охлаждением, 4–10 °C, на 2–3 человека)</strong></td>
-          <td>4, 10C, 2, 3 минуты после жара</td>
-          <td>Норадреналин, бурая жировая ткань</td>
-          <td><span class="grade-B">B</span></td>
-        </tr><tr>
-          <td><strong>Снежная комната (реальный снежный душ, –10 °C)</strong></td>
-          <td>, 10C снег, 1, 2 минуты</td>
-          <td>Альтернатива cold, plunge, симпатический ответ</td>
-          <td><span class="grade-C">C</span></td>
-        </tr><tr>
-          <td><strong>Премиум силовая линейка с грузоблоками (15 тренажёров)</strong></td>
-          <td>3, 4 силовые сессии в неделю, 70, 85% 1RM</td>
-          <td>mTOR, on, AMPK, IGF, 1, mass</td>
-          <td><span class="grade-A">A</span></td>
-        </tr><tr>
-          <td><strong>Премиум-линейка кардио (8 единиц: дорожки, велоэргометры, эллипсоиды)</strong></td>
-          <td>Z2 кардио 150, 300 мин в неделю + 1, 2 ВИИТ</td>
-          <td>VO2max, митохондриогенез, AMPK</td>
-          <td><span class="grade-A">A</span></td>
-        </tr><tr>
-          <td><strong>Функциональная рама и блочные системы</strong></td>
-          <td>Силовая и стабилизация, 2, 3 сессии</td>
-          <td>Координация, моторный контроль, AMPK</td>
-          <td><span class="grade-A">A</span></td>
-        </tr><tr>
-          <td><strong>Комплект свободных весов (Eleiko, премиум-гантели, штанги, диски)</strong></td>
-          <td>Силовые блоки 4, 6 сетов, 5, 8 повторений</td>
-          <td>mTOR, mass, кость, тестостерон</td>
-          <td><span class="grade-A">A</span></td>
-        </tr><tr>
-          <td><strong>Помосты для тяжёлой атлетики (Eleiko premium, 4 станции)</strong></td>
-          <td>Платформа для тяжёлой атлетики</td>
-          <td>mTOR, mass, плотность кости</td>
-          <td><span class="grade-A">A</span></td>
-        </tr><tr>
-          <td><strong>Комплект групповой студии (зеркала, велотренажёры, маты, звук)</strong></td>
-          <td>Йога, пилатес, дыхание, групповые ВИИТ</td>
-          <td>Парасимпатикус, AMPK, BDNF</td>
-          <td><span class="grade-A">A</span></td>
-        </tr></tbody>
-    </table>
-    <div class="info-callout reveal" style="margin-top:24px">
-      <strong>Замечание для русского контекста.</strong> Парная баня, чёрная баня и банный мастер с веником, культурно встроенные носители стека гормезиса. Они не маркетинговая декорация, а полноценная клиническая интервенция (heat shock 80, 90C, 3 захода, плюс холодовой ныряний 4, 10C). Их следует ставить в центр программы и подкреплять биомаркер, ными измерениями (hsCRP, IL, 6, HRV).
-    </div>
-  </div>
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">04, Стек гормезиса</div></div>
+ <h2 class="reveal">Стек гормезиса, ядро операционной модели</h2>
+ <p class="lede reveal">Стек гормезиса, это управляемая дозировка стрессовых стимулов на клетку: тепло, холод, гипоксия, голодание, физическая нагрузка. Биологический ответ универсален: запуск Nrf2, FOXO, AMPK, sirtuins, рост митохондриальной плотности и противовоспалительная регуляция. На уровне резорта это дешёвый, ежедневный и узнаваемый продукт; именно он отличает longevity, оператора от сетевого спа. Стек ниже ссылается на 17 позиций из реестра оборудования (см. секцию 09).</p>
+ <table class="hormesis-table reveal">
+ <thead><tr><th>Компонент</th><th>Доза / протокол</th><th>Биологический механизм</th><th>Evidence</th></tr></thead>
+ <tbody><tr>
+ <td><strong>Аппарат IHHT, интервальная гипокси-гипероксическая тренировка</strong></td>
+ <td>4 цикла гипоксии 11% / гипероксии 36% за 40 мин, 2, 3 раза в неделю</td>
+ <td>HIF-1a, AMPK, митохондриогенез</td>
+ <td><span class="grade-B">B</span></td>
+ </tr><tr>
+ <td><strong>Хаммам / паровая (под ключ, премиальная плитка / мрамор)</strong></td>
+ <td>45, 50C влажный пар, 15, 20 мин</td>
+ <td>Heat shock proteins, противовоспаление</td>
+ <td><span class="grade-B">B</span></td>
+ </tr><tr>
+ <td><strong>Контур Кнейпа (контрастные ножные ванны)</strong></td>
+ <td>Кнайпп, ходьба, чередование 38C / 12C</td>
+ <td>Сосудистая тренировка, парасимпатикус</td>
+ <td><span class="grade-C">C</span></td>
+ </tr><tr>
+ <td><strong>Камера криосауны общего действия (электрическая, –85…–110 °C)</strong></td>
+ <td>, 110C, 3 минуты</td>
+ <td>Норадреналин, противовоспаление</td>
+ <td><span class="grade-B">B</span></td>
+ </tr><tr>
+ <td><strong>Премиум ИК-сауна (full-spectrum, на 3–4 человека)</strong></td>
+ <td>60C ИК, 30, 40 мин</td>
+ <td>HSP, аутофагия, AMPK</td>
+ <td><span class="grade-B">B</span></td>
+ </tr><tr>
+ <td><strong>Премиум финская сауна (коммерческая, на 8–12 человек, Klafs / Tylo)</strong></td>
+ <td>80, 90C, 15, 20 мин 4, 7 раз в неделю</td>
+ <td>HSP, BDNF, сердечно, сосудистая защита</td>
+ <td><span class="grade-A">A</span></td>
+ </tr><tr>
+ <td><strong>Премиум русская баня, парная (на дровах, бревенчатая, под ключ)</strong></td>
+ <td>По протоколу</td>
+ <td>Гормезис, ответ Nrf2 / FOXO / AMPK</td>
+ <td><span class="grade-B">B</span></td>
+ </tr><tr>
+ <td><strong>Чёрная баня (по-чёрному, традиционная)</strong></td>
+ <td>70, 80C, дымовая среда, ритуал</td>
+ <td>HSP, культурный гормезис, NRF2</td>
+ <td><span class="grade-C">C</span></td>
+ </tr><tr>
+ <td><strong>Вторая парилка («белая»), для увеличения пропускной способности</strong></td>
+ <td>80, 90C, дублирование пропускной способности</td>
+ <td>HSP, сердечно, сосудистая защита</td>
+ <td><span class="grade-A">A</span></td>
+ </tr><tr>
+ <td><strong>Купель с холодной водой (с охлаждением, 4–10 °C, на 2–3 человека)</strong></td>
+ <td>4, 10C, 2, 3 минуты после жара</td>
+ <td>Норадреналин, бурая жировая ткань</td>
+ <td><span class="grade-B">B</span></td>
+ </tr><tr>
+ <td><strong>Снежная комната (реальный снежный душ, –10 °C)</strong></td>
+ <td>, 10C снег, 1, 2 минуты</td>
+ <td>Альтернатива cold, plunge, симпатический ответ</td>
+ <td><span class="grade-C">C</span></td>
+ </tr><tr>
+ <td><strong>Премиум силовая линейка с грузоблоками (15 тренажёров)</strong></td>
+ <td>3, 4 силовые сессии в неделю, 70, 85% 1RM</td>
+ <td>mTOR, on, AMPK, IGF, 1, mass</td>
+ <td><span class="grade-A">A</span></td>
+ </tr><tr>
+ <td><strong>Премиум-линейка кардио (8 единиц: дорожки, велоэргометры, эллипсоиды)</strong></td>
+ <td>Z2 кардио 150, 300 мин в неделю + 1, 2 ВИИТ</td>
+ <td>VO2max, митохондриогенез, AMPK</td>
+ <td><span class="grade-A">A</span></td>
+ </tr><tr>
+ <td><strong>Функциональная рама и блочные системы</strong></td>
+ <td>Силовая и стабилизация, 2, 3 сессии</td>
+ <td>Координация, моторный контроль, AMPK</td>
+ <td><span class="grade-A">A</span></td>
+ </tr><tr>
+ <td><strong>Комплект свободных весов (Eleiko, премиум-гантели, штанги, диски)</strong></td>
+ <td>Силовые блоки 4, 6 сетов, 5, 8 повторений</td>
+ <td>mTOR, мышечная масса, кость, тестостерон</td>
+ <td><span class="grade-A">A</span></td>
+ </tr><tr>
+ <td><strong>Помосты для тяжёлой атлетики (Eleiko premium, 4 станции)</strong></td>
+ <td>Платформа для тяжёлой атлетики</td>
+ <td>mTOR, mass, плотность кости</td>
+ <td><span class="grade-A">A</span></td>
+ </tr><tr>
+ <td><strong>Комплект групповой студии (зеркала, велотренажёры, маты, звук)</strong></td>
+ <td>Йога, пилатес, дыхание, групповые ВИИТ</td>
+ <td>Парасимпатикус, AMPK, BDNF</td>
+ <td><span class="grade-A">A</span></td>
+ </tr></tbody>
+ </table>
+ <div class="info-callout reveal" style="margin-top:24px">
+ <strong>Замечание для русского контекста.</strong> Парная баня, чёрная баня и банный мастер с веником, культурно встроенные носители стека гормезиса. Они не маркетинговая декорация, а полноценная клиническая интервенция (heat shock 80, 90C, 3 захода, плюс холодовой ныряний 4, 10C). Их следует ставить в центр программы и подкреплять биомаркерными измерениями (hsCRP, IL-6, HRV).
+ </div>
+ </div>
 </section>
 <section id="biomarkers">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">05, Биомаркеры</div></div>
-    <h2 class="reveal">Лонжевити, биомаркеры, диагностический позвоночник</h2>
-    <p class="lede reveal">Биомаркеры, не визуализация, формируют позвоночник клеточной longevity, практики. Они задают базис на входе, отслеживают траекторию между визитами и привязывают каждый протокол (NAD+, сенолитики, диета, банный режим) к измеримому отклику. Панель ниже включает 54 маркера, разделённых на 6 пакетов: Foundation (вход), Inflammaging, Mitochondrial / NAD+, Metabolic / TRE, Hormone и HPA, Premium Cellular Renewal. Цены даны в EUR (eu, тариф ) и RUB (доставленная стоимость в РФ).</p>
-    <div class="bundle-grid reveal">
-        <div class="bundle-card">
-          <h3>Foundation Longevity Panel</h3>
-          <div class="price-block">
-            <div class="price-eur">EUR 1 850</div>
-            <div class="price-rub">188 600 RUB (доставка в РФ)</div>
-          </div>
-          <div class="markers-list"><span class="chip">TruAge Complete (Horvath, GrimAge2, DunedinPACE, OMICmAge, SYMPHONYAge)</span><span class="chip">Glycan age</span><span class="chip">PhenoAge (расчётный)</span><span class="chip">hsCRP, IL-6, фибриноген</span><span class="chip">Глюкоза натощак, инсулин натощак, HOMA-IR, HbA1c</span><span class="chip">Полная липидограмма, ApoB, Lp(a)</span><span class="chip">Total and free testosterone, SHBG, estradiol, DHEA-S</span><span class="chip">TSH, free T3, free T4</span><span class="chip">IGF-1</span><span class="chip">Cortisol AM/PM</span><span class="chip">25-OH vitamin D, holotranscobalamin B12, RBC folate</span><span class="chip">Омега-3 индекс</span><span class="chip">Liver and kidney panels</span><span class="chip">Heavy metals (4-metal whole blood)</span><span class="chip">APOE, MTHFR (однократно)</span></div>
-          <div class="use-case">Базовая оценка при поступлении на любую программу долголетия, повтор ежегодно. Диагностическая основа, обосновывающая каждый последующий протокол.</div>
-        </div>
-        <div class="bundle-card">
-          <h3>Inflammaging Panel</h3>
-          <div class="price-block">
-            <div class="price-eur">EUR 580</div>
-            <div class="price-rub">57 040 RUB (доставка в РФ)</div>
-          </div>
-          <div class="markers-list"><span class="chip">Glycan age</span><span class="chip">hsCRP, IL-6, TNF-alpha, IL-1beta, фибриноген</span><span class="chip">GDF15 (суррогат SASP)</span><span class="chip">oxLDL</span><span class="chip">Омега-3 индекс</span></div>
-          <div class="use-case">Inflammaging Reversal program follow-up at 90 and 180 days; repeat annually.</div>
-        </div>
-        <div class="bundle-card">
-          <h3>Mitochondrial / NAD+ Panel</h3>
-          <div class="price-block">
-            <div class="price-eur">EUR 480</div>
-            <div class="price-rub">57 040 RUB (доставка в РФ)</div>
-          </div>
-          <div class="markers-list"><span class="chip">Внутриклеточный NAD+ (Jinfiniti)</span><span class="chip">Лактат (натощак, после нагрузки)</span><span class="chip">Пируват</span><span class="chip">Органические кислоты в моче (Genova или локальный эквивалент)</span><span class="chip">Убихинон (CoQ10) в плазме</span><span class="chip">Carnitine free and total</span></div>
-          <div class="use-case">Mitochondrial Reset program; pre-and-post NAD+ infusion measurement; repeat at 30 and 90 days.</div>
-        </div>
-        <div class="bundle-card">
-          <h3>Metabolic / Time-Restricted Eating Panel</h3>
-          <div class="price-block">
-            <div class="price-eur">EUR 420</div>
-            <div class="price-rub">32 200 RUB (доставка в РФ)</div>
-          </div>
-          <div class="markers-list"><span class="chip">Глюкоза натощак, инсулин натощак, HOMA-IR, HbA1c</span><span class="chip">ПГТТ 75 г с инсулином (3 часа)</span><span class="chip">ApoB, Lp(a), small dense LDL, oxLDL</span><span class="chip">CGM на 14 дней (FreeStyle Libre 2)</span><span class="chip">Печёночная панель (ALT, AST, GGT)</span><span class="chip">Адипонектин и лептин</span></div>
-          <div class="use-case">Программы Metabolic Renewal и TRE, CGM при поступлении и на 90-й день.</div>
-        </div>
-        <div class="bundle-card">
-          <h3>Hormone and HPA Axis Panel</h3>
-          <div class="price-block">
-            <div class="price-eur">EUR 480</div>
-            <div class="price-rub">34 960 RUB (доставка в РФ)</div>
-          </div>
-          <div class="markers-list"><span class="chip">Тестостерон общий и свободный, SHBG</span><span class="chip">Эстрадиол, прогестерон, DHEA-S</span><span class="chip">Кортизол 4 точки в слюне (Genova или DUTCH)</span><span class="chip">IGF-1</span><span class="chip">TSH, свободный T3, свободный T4, reverse T3</span><span class="chip">Прегненолон, 17-OH прогестерон</span></div>
-          <div class="use-case">Кандидатура на ЗГТ, программа Stress and Sleep, Adrenal Reset, повтор через 90 дней после начала ЗГТ.</div>
-        </div>
-        <div class="bundle-card">
-          <h3>Premium Cellular Renewal Panel (премиум-уровень)</h3>
-          <div class="price-block">
-            <div class="price-eur">EUR 3 800</div>
-            <div class="price-rub">414 000 RUB (доставка в РФ)</div>
-          </div>
-          <div class="markers-list"><span class="chip">Полная Foundation Longevity Panel</span><span class="chip">Длина теломер (Life Length TAT)</span><span class="chip">SASP / Olink Inflammation 96</span><span class="chip">LDL-P NMR LipoProfile</span><span class="chip">Микробиом shotgun (Viome или Genova GI Effects)</span><span class="chip">Heavy metals 8-metal extended</span><span class="chip">Pharmacogenomics CYP panel</span><span class="chip">Дополнительные маркеры исследования сенесценции</span></div>
-          <div class="use-case">Ежегодное углублённое обследование для участников высокого ценового сегмента во флагманской программе Cellular Renewal. Маркетинг-grade комплексная панель, сопоставимая с Lanserhof Lans Med Concept и Clinique La Prairie Master Diagnosis.</div>
-        </div></div>
-    <div class="info-callout reveal">
-      <strong>Логистика для России.</strong> С 2022 года DHL, FedEx, UPS приостановили B2C, отправления в РФ. Проприетарные EU/US, панели (TruDiagnostic, GlycanAge, Elysium, Cleerly) маршрутизируются через курьерские хабы Астана / Ереван / Стамбул / Дубай, типичная задержка плюс 5, 9 рабочих дней. Внутренние сети INVITRO, KDL, Helix, Atlas Biomed закрывают около 70 процентов объёма маркеров (липиды, ApoB, HbA1c, hsCRP, IL, 6, гормоны, витамины) по тарифу 30, 60 процентов от EU.
-    </div>
-    <h3 class="reveal" style="margin-top:48px">Полный реестр 54 маркеров</h3>
-    <p class="reveal" style="font-size:14px;color:var(--muted);margin-bottom:14px">Сортируется и фильтруется. Для лучшего обзора используется компактный режим. Цены: EUR, потребитель в ЕС; RUB, доставленная стоимость в РФ при FX 92.</p>
-    <div class="eq-static-wrap">
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">05, Биомаркеры</div></div>
+ <h2 class="reveal">Лонжевити, биомаркеры, диагностический позвоночник</h2>
+ <p class="lede reveal">Биомаркеры, не визуализация, формируют позвоночник клеточной longevity, практики. Они задают базис на входе, отслеживают траекторию между визитами и привязывают каждый протокол (NAD+, сенолитики, диета, банный режим) к измеримому отклику. Панель ниже включает 54 маркера, разделённых на 6 пакетов: Foundation (вход), Инфламэйджинг, Митохондриальная / NAD+, Metabolic / TRE, Hormone и HPA, Premium Cellular Renewal. Цены даны в EUR (тариф ЕС) и RUB (доставленная стоимость в РФ).</p>
+ <div class="bundle-grid reveal">
+ <div class="bundle-card">
+ <h3>Базовая панель долголетия (Foundation Longevity Panel)</h3>
+ <div class="price-block">
+ <div class="price-eur">EUR 1 850</div>
+ <div class="price-rub">188 600 RUB (доставка в РФ)</div>
+ </div>
+ <div class="markers-list"><span class="chip">TruAge Complete (Horvath, GrimAge2, DunedinPACE, OMICmAge, SYMPHONYAge)</span><span class="chip">Гликановый возраст (Glycan age)</span><span class="chip">PhenoAge (расчётный)</span><span class="chip">hsCRP, IL-6, фибриноген</span><span class="chip">Глюкоза натощак, инсулин натощак, HOMA-IR, HbA1c</span><span class="chip">Полная липидограмма, ApoB, Lp(a)</span><span class="chip">Тестостерон общий и свободный, SHBG, эстрадиол, DHEA-S</span><span class="chip">ТТГ, свободный T3, свободный T4</span><span class="chip">IGF-1</span><span class="chip">Кортизол утро/вечер</span><span class="chip">25-OH витамин D, голотранскобаламин B12, фолат в эритроцитах</span><span class="chip">Омега-3 индекс</span><span class="chip">Печёночная и почечная панели</span><span class="chip">Тяжёлые металлы (панель из 4 металлов, цельная кровь)</span><span class="chip">APOE, MTHFR (однократно)</span></div>
+ <div class="use-case">Базовая оценка при поступлении на любую программу долголетия, повтор ежегодно. Диагностическая основа, обосновывающая каждый последующий протокол.</div>
+ </div>
+ <div class="bundle-card">
+ <h3>Панель инфламэйджинга (Инфламэйджинг Panel)</h3>
+ <div class="price-block">
+ <div class="price-eur">EUR 580</div>
+ <div class="price-rub">57 040 RUB (доставка в РФ)</div>
+ </div>
+ <div class="markers-list"><span class="chip">Гликановый возраст (Glycan age)</span><span class="chip">hsCRP, IL-6, TNF-альфа, IL-1бета, фибриноген</span><span class="chip">GDF15 (суррогат SASP)</span><span class="chip">oxLDL</span><span class="chip">Омега-3 индекс</span></div>
+ <div class="use-case">Контрольное обследование программы Инфламэйджинг Reversal на 90-й и 180-й день; повтор ежегодно.</div>
+ </div>
+ <div class="bundle-card">
+ <h3>Митохондриальная / NAD+ панель</h3>
+ <div class="price-block">
+ <div class="price-eur">EUR 480</div>
+ <div class="price-rub">57 040 RUB (доставка в РФ)</div>
+ </div>
+ <div class="markers-list"><span class="chip">Внутриклеточный NAD+ (Jinfiniti)</span><span class="chip">Лактат (натощак, после нагрузки)</span><span class="chip">Пируват</span><span class="chip">Органические кислоты в моче (Genova или локальный эквивалент)</span><span class="chip">Убихинон (CoQ10) в плазме</span><span class="chip">Карнитин свободный и общий</span></div>
+ <div class="use-case">Программа Mitochondrial Reset; измерение до и после NAD+ инфузии; повтор на 30-й и 90-й день.</div>
+ </div>
+ <div class="bundle-card">
+ <h3>Метаболическая / TRE панель (Time-Restricted Eating)</h3>
+ <div class="price-block">
+ <div class="price-eur">EUR 420</div>
+ <div class="price-rub">32 200 RUB (доставка в РФ)</div>
+ </div>
+ <div class="markers-list"><span class="chip">Глюкоза натощак, инсулин натощак, HOMA-IR, HbA1c</span><span class="chip">ПГТТ 75 г с инсулином (3 часа)</span><span class="chip">ApoB, Lp(a), мелкие плотные ЛПНП (sdLDL), окисленные ЛПНП (oxLDL)</span><span class="chip">CGM на 14 дней (FreeStyle Libre 2)</span><span class="chip">Печёночная панель (ALT, AST, GGT)</span><span class="chip">Адипонектин и лептин</span></div>
+ <div class="use-case">Программы Metabolic Renewal и TRE, CGM при поступлении и на 90-й день.</div>
+ </div>
+ <div class="bundle-card">
+ <h3>Панель гормонов и оси ГГН</h3>
+ <div class="price-block">
+ <div class="price-eur">EUR 480</div>
+ <div class="price-rub">34 960 RUB (доставка в РФ)</div>
+ </div>
+ <div class="markers-list"><span class="chip">Тестостерон общий и свободный, SHBG</span><span class="chip">Эстрадиол, прогестерон, DHEA-S</span><span class="chip">Кортизол 4 точки в слюне (Genova или DUTCH)</span><span class="chip">IGF-1</span><span class="chip">TSH, свободный T3, свободный T4, reverse T3</span><span class="chip">Прегненолон, 17-OH прогестерон</span></div>
+ <div class="use-case">Кандидатура на ЗГТ, программа Stress and Sleep, Adrenal Reset, повтор через 90 дней после начала ЗГТ.</div>
+ </div>
+ <div class="bundle-card">
+ <h3>Премиум-панель клеточного обновления (Premium Cellular Renewal Panel)</h3>
+ <div class="price-block">
+ <div class="price-eur">EUR 3 800</div>
+ <div class="price-rub">414 000 RUB (доставка в РФ)</div>
+ </div>
+ <div class="markers-list"><span class="chip">Полная базовая панель долголетия (Базовая панель долголетия (Foundation Longevity Panel))</span><span class="chip">Длина теломер (Life Length TAT)</span><span class="chip">Панель SASP / Olink Inflammation 96</span><span class="chip">LDL-P (NMR LipoProfile)</span><span class="chip">Шотган-метагеномика микробиома (Viome или Genova GI Effects)</span><span class="chip">Расширенная панель тяжёлых металлов (8 элементов)</span><span class="chip">Фармакогеномическая панель CYP</span><span class="chip">Дополнительные маркеры исследования сенесценции</span></div>
+ <div class="use-case">Ежегодное углублённое обследование для участников высокого ценового сегмента во флагманской программе Cellular Renewal. Маркетингово-флагманская комплексная панель, сопоставимая с Lanserhof Lans Med Concept и Clinique La Prairie Master Diagnosis.</div>
+ </div></div>
+ <div class="info-callout reveal">
+ <strong>Логистика для России.</strong> С 2022 года DHL, FedEx, UPS приостановили B2C, отправления в РФ. Проприетарные EU/US, панели (TruDiagnostic, GlycanAge, Elysium, Cleerly) маршрутизируются через курьерские хабы Астана / Ереван / Стамбул / Дубай, типичная задержка плюс 5, 9 рабочих дней. Внутренние сети INVITRO, KDL, Helix, Atlas Biomed закрывают около 70 процентов объёма маркеров (липиды, ApoB, HbA1c, hsCRP, IL-6, гормоны, витамины) по тарифу 30, 60 процентов от EU.
+ </div>
+ <h3 class="reveal" style="margin-top:48px">Полный реестр 54 маркеров</h3>
+ <p class="reveal" style="font-size:14px;color:var(--muted);margin-bottom:14px">Поиск по всем столбцам через поле ниже. Цены: EUR, потребитель в ЕС; RUB, доставленная стоимость в РФ при FX 92.</p>
+ <div class="eq-static-wrap">
 <input type="text" class="eq-search" placeholder="Поиск маркеров…" data-target="bmStaticTable">
 <table class="eq-static-table bm-static-table" id="bmStaticTable">
 <thead><tr>
@@ -507,8 +511,8 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td>Фенотипическая версия полностью рассчитывается на основе российских лабораторных данных без дополнительной стоимости. Маркетинговый плюс.</td>
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A (валидирован на смертности по NHANES)">A</span></td>
 </tr><tr>
-<td><strong>Glycan age (гликозилирование IgG)</strong></td>
-<td>Inflammaging</td>
+<td><strong>Гликановый возраст (Glycan age) (гликозилирование IgG)</strong></td>
+<td>Инфламэйджинг</td>
 <td>Сухая капля крови, UPLC-анализ высвобожденных N-гликанов IgG</td>
 <td class="eq-num">295</td>
 <td class="eq-num">23 000</td>
@@ -516,7 +520,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B (механистически сильно, обратимо при вмешательстве)">B</span></td>
 </tr><tr>
 <td><strong>Длина теломер (медиана и доля критически коротких)</strong></td>
-<td>Cellular aging</td>
+<td>Клеточное старение</td>
 <td>ЭДТА цельная кровь, высокопроизводительный Q-FISH с разрешением на уровне отдельной клетки</td>
 <td class="eq-num">399</td>
 <td class="eq-num">41 400</td>
@@ -524,7 +528,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B (ассоциировано со смертностью; в части исследований реагирует на вмешательства)">B</span></td>
 </tr><tr>
 <td><strong>Внутриклеточный уровень NAD+</strong></td>
-<td>Mitochondrial / NAD+</td>
+<td>Митохондриальная / NAD+</td>
 <td>Капиллярная кровь DBS, количественный LC-MS/MS внутриклеточного NAD+</td>
 <td class="eq-num">230</td>
 <td class="eq-num">20 240</td>
@@ -636,7 +640,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>Аполипопротеин B (ApoB)</strong></td>
-<td>Lipids advanced</td>
+<td>Расширенная липидология</td>
 <td>Иммунотурбидиметрия, сыворотка</td>
 <td class="eq-num">18</td>
 <td class="eq-num">1 500</td>
@@ -644,7 +648,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>LDL-P (NMR LipoProfile)</strong></td>
-<td>Lipids advanced</td>
+<td>Расширенная липидология</td>
 <td>NMR-спектроскопия, сыворотка, отправка в замороженном виде</td>
 <td class="eq-num">130</td>
 <td class="eq-num">18 400</td>
@@ -652,7 +656,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B (коррелирует с ApoB; инкрементальная ценность умеренная)">B</span></td>
 </tr><tr>
 <td><strong>Липопротеин(а), Lp(a)</strong></td>
-<td>Lipids advanced</td>
+<td>Расширенная липидология</td>
 <td>Иммунотурбидиметрия, сыворотка</td>
 <td class="eq-num">22</td>
 <td class="eq-num">1 900</td>
@@ -660,7 +664,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>Мелкие плотные ЛПНП (sdLDL-C)</strong></td>
-<td>Lipids advanced</td>
+<td>Расширенная липидология</td>
 <td>Прямое измерение (Randox, Denka), сыворотка</td>
 <td class="eq-num">35</td>
 <td class="eq-num">3 200</td>
@@ -668,7 +672,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B">B</span></td>
 </tr><tr>
 <td><strong>Окисленные ЛПНП (oxLDL)</strong></td>
-<td>Lipids advanced</td>
+<td>Расширенная липидология</td>
 <td>ИФА (Mercodia), сыворотка</td>
 <td class="eq-num">50</td>
 <td class="eq-num">4 500</td>
@@ -740,7 +744,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>ТТГ (TSH)</strong></td>
-<td>Hormones / Thyroid</td>
+<td>Гормоны / щитовидная железа</td>
 <td>ECLIA, сыворотка</td>
 <td class="eq-num">7</td>
 <td class="eq-num">550</td>
@@ -748,7 +752,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>Свободный T4</strong></td>
-<td>Hormones / Thyroid</td>
+<td>Гормоны / щитовидная железа</td>
 <td>ECLIA, сыворотка</td>
 <td class="eq-num">8</td>
 <td class="eq-num">600</td>
@@ -756,7 +760,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>Свободный T3</strong></td>
-<td>Hormones / Thyroid</td>
+<td>Гормоны / щитовидная железа</td>
 <td>ECLIA, сыворотка</td>
 <td class="eq-num">8</td>
 <td class="eq-num">650</td>
@@ -764,7 +768,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>Reverse T3 (обратный T3)</strong></td>
-<td>Hormones / Thyroid</td>
+<td>Гормоны / щитовидная железа</td>
 <td>РИА или LC-MS/MS, сыворотка</td>
 <td class="eq-num">32</td>
 <td class="eq-num">2 900</td>
@@ -772,7 +776,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B">B</span></td>
 </tr><tr>
 <td><strong>25-гидроксивитамин D</strong></td>
-<td>Vitamins/minerals</td>
+<td>Витамины/минералы</td>
 <td>ECLIA или LC-MS/MS, сыворотка</td>
 <td class="eq-num">18</td>
 <td class="eq-num">1 500</td>
@@ -780,7 +784,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>Голотранскобаламин (активный B12)</strong></td>
-<td>Vitamins/minerals</td>
+<td>Витамины/минералы</td>
 <td>ECLIA, сыворотка</td>
 <td class="eq-num">28</td>
 <td class="eq-num">2 500</td>
@@ -788,7 +792,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A (более чувствителен, чем общий B12)">A</span></td>
 </tr><tr>
 <td><strong>Фолат в эритроцитах (RBC folate)</strong></td>
-<td>Vitamins/minerals</td>
+<td>Витамины/минералы</td>
 <td>ECLIA, ЭДТА цельная кровь</td>
 <td class="eq-num">17</td>
 <td class="eq-num">1 500</td>
@@ -796,7 +800,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>Омега-3 индекс (EPA + DHA в мембране эритроцитов)</strong></td>
-<td>Vitamins/minerals</td>
+<td>Витамины/минералы</td>
 <td>GC-FID на сухой капле крови</td>
 <td class="eq-num">90</td>
 <td class="eq-num">9 200</td>
@@ -804,7 +808,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>Цинк (плазма или эритроциты)</strong></td>
-<td>Vitamins/minerals</td>
+<td>Витамины/минералы</td>
 <td>ICP-MS, плазма</td>
 <td class="eq-num">14</td>
 <td class="eq-num">1 200</td>
@@ -812,7 +816,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B">B</span></td>
 </tr><tr>
 <td><strong>Медь</strong></td>
-<td>Vitamins/minerals</td>
+<td>Витамины/минералы</td>
 <td>ICP-MS, плазма</td>
 <td class="eq-num">14</td>
 <td class="eq-num">1 200</td>
@@ -820,7 +824,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B">B</span></td>
 </tr><tr>
 <td><strong>Селен</strong></td>
-<td>Vitamins/minerals</td>
+<td>Витамины/минералы</td>
 <td>ICP-MS, плазма или цельная кровь</td>
 <td class="eq-num">16</td>
 <td class="eq-num">1 400</td>
@@ -828,7 +832,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B">B</span></td>
 </tr><tr>
 <td><strong>Магний в эритроцитах</strong></td>
-<td>Vitamins/minerals</td>
+<td>Витамины/минералы</td>
 <td>Атомная абсорбция, ЭДТА цельная кровь</td>
 <td class="eq-num">22</td>
 <td class="eq-num">2 000</td>
@@ -836,7 +840,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B">B</span></td>
 </tr><tr>
 <td><strong>Панель тяжёлых металлов: ртуть, свинец, мышьяк, кадмий (цельная кровь)</strong></td>
-<td>Toxicology</td>
+<td>Токсикология</td>
 <td>ICP-MS, ЭДТА цельная кровь</td>
 <td class="eq-num">75</td>
 <td class="eq-num">6 500</td>
@@ -844,7 +848,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>Высокочувствительный тропонин T или I</strong></td>
-<td>Cardiac risk</td>
+<td>Кардиологический риск</td>
 <td>ECLIA hs-TnT (Roche) или hs-TnI (Abbott), сыворотка</td>
 <td class="eq-num">18</td>
 <td class="eq-num">1 500</td>
@@ -852,7 +856,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>NT-proBNP</strong></td>
-<td>Cardiac risk</td>
+<td>Кардиологический риск</td>
 <td>ECLIA, сыворотка</td>
 <td class="eq-num">30</td>
 <td class="eq-num">2 700</td>
@@ -884,15 +888,15 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B">B</span></td>
 </tr><tr>
 <td><strong>Генотипирование APOE</strong></td>
-<td>Genetic</td>
+<td>Генетика</td>
 <td>ПЦР или секвенирование, ЭДТА цельная кровь или буккальный мазок</td>
 <td class="eq-num">65</td>
 <td class="eq-num">5 500</td>
-<td>Доступен внутри страны в INVITRO и MyGenetics. Около 5500 RUB.</td>
+<td>Доступен внутри страны в INVITRO и MyГенетикаs. Около 5500 RUB.</td>
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr><tr>
 <td><strong>MTHFR (C677T и A1298C)</strong></td>
-<td>Genetic</td>
+<td>Генетика</td>
 <td>ПЦР, ЭДТА цельная кровь</td>
 <td class="eq-num">35</td>
 <td class="eq-num">3 000</td>
@@ -900,142 +904,142 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B (клиническая значимость дискуссионна)">B</span></td>
 </tr><tr>
 <td><strong>Базовая фармакогеномическая панель (CYP2D6, CYP2C19, CYP3A4, VKORC1)</strong></td>
-<td>Genetic</td>
+<td>Генетика</td>
 <td>ПЦР или генотипирование на чипе, буккальный мазок или цельная кровь</td>
 <td class="eq-num">195</td>
 <td class="eq-num">17 000</td>
-<td>Доступен в MyGenetics и INVITRO. Около 17000 RUB.</td>
+<td>Доступен в MyГенетикаs и INVITRO. Около 17000 RUB.</td>
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 </tr></tbody></table></div>
 </section>
 <section id="programs">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">06, Программы</div></div>
-    <h2 class="reveal">Программы, продуктовый слой</h2>
-    <p class="lede reveal">Оборудование, это коммодитизирующийся слой; программа, это бренд. Четыре программы ниже превращают пути активации клетки и стек гормезиса в продаваемый, повторяемый продукт с понятным ценником, маржой и измеримым исходом. Каждая программа имеет свой биомаркер, ный пакет, своё расписание, своих специалистов и свой набор оборудования; гость не покупает спа, день, он покупает биологическое изменение в течение 8, 12 недель.</p>
-    <div class="program-grid reveal">
-        <div class="program-card p-renew">
-          <h3>Cellular Renewal</h3>
-          <div class="tag">Активация аутофагии, перезагрузка метаболической гибкости, формирование измеримой базовой линии долголетия.</div>
-          <div class="price-row">
-            <div>
-              <div class="price-eur">EUR 19 500</div>
-              <div class="price-rub">1 794 000 RUB</div>
-            </div>
-            <div style="font-size:12px;color:var(--muted);text-align:right;font-weight:600">10 ночей</div>
-          </div>
-          <div class="meta-row">
-            <div><span class="lab">Целевой гость</span>Руководитель 45-65 лет, метаболически здоровый, но ощущающий замедление; хочет получить защищённую биологическую перезагрузку и чистую базовую линию, которую можно отслеживать годами.</div>
-            <div><span class="lab">Биомаркеры</span>Пакет на входе, контрольная точка через 8, 12 недель</div>
-          </div>
-          <div class="cm-row">
-            <span>Контрибуционная маржа</span>
-            <span>EUR 12 447 (64%)</span>
-          </div>
-          <div class="outcomes"><strong>Ожидаемый результат за 8, 12 недель:</strong> Снижение жировой массы на 5-8% (подтверждено DEXA); Снижение инсулина натощак на 20-40%, типично у метаболически негибких гостей; Снижение ApoB на 5-15%, если повышен на входе; Снижение HbA1c на 0,2-0,4 процентных пункта; Снижение средней глюкозы по CGM на 0,4-0,8 ммоль/л, улучшение time-in-range; Самооценка энергии и качества сна, измеримая на Oura и Whoop; Снижение PhenoAge на 0,5-1,5 года возможно к 6 месяцам</div>
-        </div>
-        <div class="program-card p-mito">
-          <h3>Mitochondrial Reset</h3>
-          <div class="tag">Восстановление клеточной энергии, рост VO2 max, обратимое преодоление функционального спада, ощутимое физически.</div>
-          <div class="price-row">
-            <div>
-              <div class="price-eur">EUR 15 500</div>
-              <div class="price-rub">1 426 000 RUB</div>
-            </div>
-            <div style="font-size:12px;color:var(--muted);text-align:right;font-weight:600">7 ночей</div>
-          </div>
-          <div class="meta-row">
-            <div><span class="lab">Целевой гость</span>Руководитель 50-70 лет с жалобами на утомляемость, постковидный или постбёрнаут-спад, снижение спортивной формы, туман в голове. Подходит для high-performer, упёршегося в плато.</div>
-            <div><span class="lab">Биомаркеры</span>Пакет на входе, контрольная точка через 8, 12 недель</div>
-          </div>
-          <div class="cm-row">
-            <span>Контрибуционная маржа</span>
-            <span>EUR 8 031 (52%)</span>
-          </div>
-          <div class="outcomes"><strong>Ожидаемый результат за 8, 12 недель:</strong> Увеличение VO2 max на 5-12% у нетренированных или потерявших форму гостей (подтверждено CPET); Рост мощности на лактатном пороге на 8-15%; Рост концентрации NAD+ в цельной крови на 50-150% (анализ Jinfiniti), удерживается в течение 4-8 недель; Самооценка энергии и когнитивной ясности по стандартизированным шкалам PROMIS; Снижение ЧСС покоя на 4-8 уд/мин; Улучшение HRV на 10-20% (Whoop или Oura)</div>
-        </div>
-        <div class="program-card p-inflam">
-          <h3>Inflammaging Reversal</h3>
-          <div class="tag">Усмирение хронического воспаления, разгоняющего старение, восстановление кишечно-иммунной устойчивости за 14 ночей.</div>
-          <div class="price-row">
-            <div>
-              <div class="price-eur">EUR 24 500</div>
-              <div class="price-rub">2 254 000 RUB</div>
-            </div>
-            <div style="font-size:12px;color:var(--muted);text-align:right;font-weight:600">14 ночей</div>
-          </div>
-          <div class="meta-row">
-            <div><span class="lab">Целевой гость</span>Гость 50-75 лет с повышенным hsCRP или IL-6, признаками метаболического синдрома, симптомами со стороны ЖКТ, скованностью суставов или поствоспалительным шлейфом после инфекции. Пациент с ощущением «постарел», у…</div>
-            <div><span class="lab">Биомаркеры</span>Пакет на входе, контрольная точка через 8, 12 недель</div>
-          </div>
-          <div class="cm-row">
-            <span>Контрибуционная маржа</span>
-            <span>EUR 13 679 (56%)</span>
-          </div>
-          <div class="outcomes"><strong>Ожидаемый результат за 8, 12 недель:</strong> Снижение hsCRP на 30-60% при значении выше 2 мг/л на входе; Снижение IL-6 на 20-40%; Снижение GlycA на 5-10% (NMR-композитный маркер воспаления); Снижение висцеральной жировой ткани на 8-15% (DEXA); Рост альфа-разнообразия микробиома, нормализация соотношения F/B; Самооценка скованности суставов, утомляемости, симптомов ЖКТ улучшена по валидированным PROs; Снижение PhenoAge на 1-2 года возможно к 6 месяцам с учётом более тяжёлой противовоспалительной нагрузки</div>
-        </div>
-        <div class="program-card p-epi">
-          <h3>Epigenetic Age Reduction</h3>
-          <div class="tag">12-недельный протокол с 7-ночным курортным интенсивом плюс ежеквартальные чек-ины, разработанный для смещения ваших эпигенетических часов.</div>
-          <div class="price-row">
-            <div>
-              <div class="price-eur">EUR 28 500</div>
-              <div class="price-rub">2 622 000 RUB</div>
-            </div>
-            <div style="font-size:12px;color:var(--muted);text-align:right;font-weight:600">7 ночей курортного интенсива плюс 12-недельный домашний протокол с 2 ежеквартальными чек-инами (3-й месяц и 6-й месяц, телемед-перетестирование панели)</div>
-          </div>
-          <div class="meta-row">
-            <div><span class="lab">Целевой гость</span>Трекер, чаще 40-60 лет. Уже тестировал эпигенетический возраст (TruDiagnostic, Elysium, GlycanAge), готов к структурированной 12-недельной интервенции и хочет получить измеримое снижение DunedinPACE или GrimAge2.…</div>
-            <div><span class="lab">Биомаркеры</span>Пакет на входе, контрольная точка через 8, 12 недель</div>
-          </div>
-          <div class="cm-row">
-            <span>Контрибуционная маржа</span>
-            <span>EUR 13 843 (49%)</span>
-          </div>
-          <div class="outcomes"><strong>Ожидаемый результат за 8, 12 недель:</strong> Снижение DunedinPACE на 0,03-0,08 (клинически значимое замедление темпа старения), достижимо у комплаентных гостей; Снижение Horvath или GrimAge2 на 0,5-2,0 года к 12-й неделе (в Younger Trial Fitzgerald получено 3,23 года по PhenoAge за 8 недель); Снижение PhenoAge на 1-3 года; Улучшения hsCRP, инсулина натощак, ApoB, согласованные с целями Cellular Renewal; Увеличение VO2 max на 5-10%; Улучшение эффективности сна на 3-7% по Oura; Соблюдение, доминирующая переменная:…</div>
-        </div></div>
-    <div class="revenue-callout reveal">
-      <div><div class="num">1 281</div><div class="lab">гостей программ в год</div></div>
-      <div><div class="num">EUR 21 100</div><div class="lab">средневзвешенная цена</div></div>
-      <div><div class="num">EUR 27 млн</div><div class="lab">выручка программ, год 5</div></div>
-      <div><div class="num">68.2 percent</div><div class="lab">от выручки резорта</div></div>
-    </div>
-    <p style="font-size:13px;color:var(--muted);margin-top:18px;font-style:italic">Допущения: 90 ключей, 65 процентов загрузки на пятый год, средний срок проживания 10 ночей, 60 процентов гостей, заездов на программе. FX 92 RUB/EUR. Без, программная выручка номера, ресторан, спа, лаунж добавляет EUR 8,1 млн; членство и ритейл, EUR 4,5 млн. Итого выручка резорта на пятый год EUR 39,6 млн, RUB 3,65 млрд.</p>
-  </div>
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">06, Программы</div></div>
+ <h2 class="reveal">Программы, продуктовый слой</h2>
+ <p class="lede reveal">Оборудование : это коммодитизирующийся слой, программа : это бренд. Четыре программы ниже превращают пути активации клетки и стек гормезиса в продаваемый, повторяемый продукт с понятным ценником, маржой и измеримым исходом. Каждая программа имеет свой биомаркерный пакет, своё расписание, своих специалистов и свой набор оборудования; гость не покупает спа-день, он покупает биологическое изменение в течение 8-12 недель.</p>
+ <div class="program-grid reveal">
+ <div class="program-card p-renew">
+ <h3>Cellular Renewal</h3>
+ <div class="tag">Активация аутофагии, перезагрузка метаболической гибкости, формирование измеримой базовой линии долголетия.</div>
+ <div class="price-row">
+ <div>
+ <div class="price-eur">EUR 19 500</div>
+ <div class="price-rub">1 794 000 RUB</div>
+ </div>
+ <div style="font-size:12px;color:var(--muted);text-align:right;font-weight:600">10 ночей</div>
+ </div>
+ <div class="meta-row">
+ <div><span class="lab">Целевой гость</span>Руководитель 45-65 лет, метаболически здоровый, но ощущающий замедление; хочет получить защищённую биологическую перезагрузку и чистую базовую линию, которую можно отслеживать годами.</div>
+ <div><span class="lab">Биомаркеры</span>Пакет на входе, контрольная точка через 8, 12 недель</div>
+ </div>
+ <div class="cm-row">
+ <span>Контрибуционная маржа</span>
+ <span>EUR 12 447 (64%)</span>
+ </div>
+ <div class="outcomes"><strong>Ожидаемый результат за 8, 12 недель:</strong> Снижение жировой массы на 5-8% (подтверждено DEXA); Снижение инсулина натощак на 20-40%, типично у метаболически негибких гостей; Снижение ApoB на 5-15%, если повышен на входе; Снижение HbA1c на 0,2-0,4 процентных пункта; Снижение средней глюкозы по CGM на 0,4-0,8 ммоль/л, улучшение time-in-range; Самооценка энергии и качества сна, измеримая на Oura и Whoop; Снижение PhenoAge на 0,5-1,5 года возможно к 6 месяцам</div>
+ </div>
+ <div class="program-card p-mito">
+ <h3>Mitochondrial Reset</h3>
+ <div class="tag">Восстановление клеточной энергии, рост VO2 max, обратимое преодоление функционального спада, ощутимое физически.</div>
+ <div class="price-row">
+ <div>
+ <div class="price-eur">EUR 15 500</div>
+ <div class="price-rub">1 426 000 RUB</div>
+ </div>
+ <div style="font-size:12px;color:var(--muted);text-align:right;font-weight:600">7 ночей</div>
+ </div>
+ <div class="meta-row">
+ <div><span class="lab">Целевой гость</span>Руководитель 50-70 лет с жалобами на утомляемость, постковидный или постбёрнаут-спад, снижение спортивной формы, туман в голове. Подходит для high-performer, упёршегося в плато.</div>
+ <div><span class="lab">Биомаркеры</span>Пакет на входе, контрольная точка через 8, 12 недель</div>
+ </div>
+ <div class="cm-row">
+ <span>Контрибуционная маржа</span>
+ <span>EUR 8 031 (52%)</span>
+ </div>
+ <div class="outcomes"><strong>Ожидаемый результат за 8, 12 недель:</strong> Увеличение VO2 max на 5-12% у нетренированных или потерявших форму гостей (подтверждено CPET); Рост мощности на лактатном пороге на 8-15%; Рост концентрации NAD+ в цельной крови на 50-150% (анализ Jinfiniti), удерживается в течение 4-8 недель; Самооценка энергии и когнитивной ясности по стандартизированным шкалам PROMIS; Снижение ЧСС покоя на 4-8 уд/мин; Улучшение HRV на 10-20% (Whoop или Oura)</div>
+ </div>
+ <div class="program-card p-inflam">
+ <h3>Инфламэйджинг Reversal</h3>
+ <div class="tag">Усмирение хронического воспаления, разгоняющего старение, восстановление кишечно-иммунной устойчивости за 14 ночей.</div>
+ <div class="price-row">
+ <div>
+ <div class="price-eur">EUR 24 500</div>
+ <div class="price-rub">2 254 000 RUB</div>
+ </div>
+ <div style="font-size:12px;color:var(--muted);text-align:right;font-weight:600">14 ночей</div>
+ </div>
+ <div class="meta-row">
+ <div><span class="lab">Целевой гость</span>Гость 50-75 лет с повышенным hsCRP или IL-6, признаками метаболического синдрома, симптомами со стороны ЖКТ, скованностью суставов или поствоспалительным шлейфом после инфекции. Пациент с ощущением «постарел», у…</div>
+ <div><span class="lab">Биомаркеры</span>Пакет на входе, контрольная точка через 8, 12 недель</div>
+ </div>
+ <div class="cm-row">
+ <span>Контрибуционная маржа</span>
+ <span>EUR 13 679 (56%)</span>
+ </div>
+ <div class="outcomes"><strong>Ожидаемый результат за 8, 12 недель:</strong> Снижение hsCRP на 30-60% при значении выше 2 мг/л на входе; Снижение IL-6 на 20-40%; Снижение GlycA на 5-10% (NMR-композитный маркер воспаления); Снижение висцеральной жировой ткани на 8-15% (DEXA); Рост альфа-разнообразия микробиома, нормализация соотношения F/B; Самооценка скованности суставов, утомляемости, симптомов ЖКТ улучшена по валидированным PROs; Снижение PhenoAge на 1-2 года возможно к 6 месяцам с учётом более тяжёлой противовоспалительной нагрузки</div>
+ </div>
+ <div class="program-card p-epi">
+ <h3>Epigenetic Age Reduction</h3>
+ <div class="tag">12-недельный протокол с 7-ночным курортным интенсивом плюс ежеквартальные чек-ины, разработанный для смещения ваших эпигенетических часов.</div>
+ <div class="price-row">
+ <div>
+ <div class="price-eur">EUR 28 500</div>
+ <div class="price-rub">2 622 000 RUB</div>
+ </div>
+ <div style="font-size:12px;color:var(--muted);text-align:right;font-weight:600">7 ночей курортного интенсива плюс 12-недельный домашний протокол с 2 ежеквартальными чек-инами (3-й месяц и 6-й месяц, телемед-перетестирование панели)</div>
+ </div>
+ <div class="meta-row">
+ <div><span class="lab">Целевой гость</span>Трекер, чаще 40-60 лет. Уже тестировал эпигенетический возраст (TruDiagnostic, Elysium, GlycanAge), готов к структурированной 12-недельной интервенции и хочет получить измеримое снижение DunedinPACE или GrimAge2.…</div>
+ <div><span class="lab">Биомаркеры</span>Пакет на входе, контрольная точка через 8, 12 недель</div>
+ </div>
+ <div class="cm-row">
+ <span>Контрибуционная маржа</span>
+ <span>EUR 13 843 (49%)</span>
+ </div>
+ <div class="outcomes"><strong>Ожидаемый результат за 8, 12 недель:</strong> Снижение DunedinPACE на 0,03-0,08 (клинически значимое замедление темпа старения), достижимо у комплаентных гостей; Снижение Horvath или GrimAge2 на 0,5-2,0 года к 12-й неделе (в Younger Trial Fitzgerald получено 3,23 года по PhenoAge за 8 недель); Снижение PhenoAge на 1-3 года; Улучшения hsCRP, инсулина натощак, ApoB, согласованные с целями Cellular Renewal; Увеличение VO2 max на 5-10%; Улучшение эффективности сна на 3-7% по Oura; Соблюдение, доминирующая переменная:…</div>
+ </div></div>
+ <div class="revenue-callout reveal">
+ <div><div class="num">1 281</div><div class="lab">гостей программ в год</div></div>
+ <div><div class="num">EUR 21 100</div><div class="lab">средневзвешенная цена</div></div>
+ <div><div class="num">EUR 27 млн</div><div class="lab">выручка программ, год 5</div></div>
+ <div><div class="num">68.2 percent</div><div class="lab">от выручки резорта</div></div>
+ </div>
+ <p style="font-size:13px;color:var(--muted);margin-top:18px;font-style:italic">Допущения: 90 ключей, 65 процентов загрузки на пятый год, средний срок проживания 10 ночей, 60 процентов гостей, заездов на программе. FX 92 RUB/EUR. Без, программная выручка номера, ресторан, спа, лаунж добавляет EUR 8,1 млн; членство и ритейл, EUR 4,5 млн. Итого выручка резорта на пятый год EUR 39,6 млн, RUB 3,65 млрд.</p>
+ </div>
 </section>
 <section id="staffing">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">07, Клинический персонал</div></div>
-    <h2 class="reveal">Клинический персонал, отдельная экономическая статья</h2>
-    <p class="lede reveal">Бьюрстам подчёркивает: оборудование быстро стандартизируется, поэтому единственный устойчивый ров, это клинический специалист, владеющий клеточной наукой. Longevity, врач, фармаколог по NAD+, физиолог CPET, технолог сна и сертифицированный сенолитический терапевт, это нечасто встречаемый профиль, и его невозможно заменить новым прибором. Поэтому клинический ФОТ, это <em>отдельная</em> экономическая статья, не растворяемая в общих эксплуатационных расходах.</p>
-    <div class="fte-grid reveal">
-        <div class="fte-card f-six">
-          <div class="fte-num">28</div>
-          <div class="fte-lab">FTE на 90 ключей</div>
-          <h4>Six Senses Place</h4>
-          <p style="font-size:13px;color:var(--ink-2)">Wellness, плюс с longevity глубиной по биомаркерам</p>
-          <div class="pay-row">Годовой ФОТ ЕС: <span class="v">EUR 1 061 000</span></div>
-          <div class="pay-row">Годовой ФОТ РФ: <span class="v">97 569 000 RUB</span></div>
-        </div>
-        <div class="fte-card f-sha">
-          <div class="fte-num">58</div>
-          <div class="fte-lab">FTE на 90 ключей</div>
-          <h4>SHA / Chenot</h4>
-          <p style="font-size:13px;color:var(--ink-2)">Медицина среднего слоя, многодисциплинарный детокс</p>
-          <div class="pay-row">Годовой ФОТ ЕС: <span class="v">EUR 2 953 000</span></div>
-          <div class="pay-row">Годовой ФОТ РФ: <span class="v">271 648 000 RUB</span></div>
-        </div>
-        <div class="fte-card f-clp">
-          <div class="fte-num">81</div>
-          <div class="fte-lab">FTE на 90 ключей</div>
-          <h4>Lanserhof / CLP</h4>
-          <p style="font-size:13px;color:var(--ink-2)">Полная клиника, регенеративная медицина</p>
-          <div class="pay-row">Годовой ФОТ ЕС: <span class="v">EUR 3 883 000</span></div>
-          <div class="pay-row">Годовой ФОТ РФ: <span class="v">357 271 000 RUB</span></div>
-        </div></div>
-    <h3 class="reveal" style="margin-top:48px">Реестр 28 ролей</h3>
-    <p class="reveal" style="font-size:14px;color:var(--muted);margin-bottom:14px">Включает квалификации, FTE на каждый уровень, годовую зарплату в ЕС и в РФ, доступность на российском рынке. Сортировка и фильтр по столбцам.</p>
-    <div class="eq-static-wrap">
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">07, Клинический персонал</div></div>
+ <h2 class="reveal">Клинический персонал, отдельная экономическая статья</h2>
+ <p class="lede reveal">Бьюрстам подчёркивает: оборудование быстро стандартизируется, поэтому единственный устойчивый ров, это клинический специалист, владеющий клеточной наукой. Longevity, врач, фармаколог по NAD+, физиолог CPET, технолог сна и сертифицированный сенолитический терапевт, это нечасто встречаемый профиль, и его невозможно заменить новым прибором. Поэтому клинический ФОТ, это <em>отдельная</em> экономическая статья, не растворяемая в общих эксплуатационных расходах.</p>
+ <div class="fte-grid reveal">
+ <div class="fte-card f-six">
+ <div class="fte-num">28</div>
+ <div class="fte-lab">FTE на 90 ключей</div>
+ <h4>Six Senses Place</h4>
+ <p style="font-size:13px;color:var(--ink-2)">Wellness-плюс с longevity-глубиной по биомаркерам</p>
+ <div class="pay-row">Годовой ФОТ ЕС: <span class="v">EUR 1 061 000</span></div>
+ <div class="pay-row">Годовой ФОТ РФ: <span class="v">97 569 000 RUB</span></div>
+ </div>
+ <div class="fte-card f-sha">
+ <div class="fte-num">58</div>
+ <div class="fte-lab">FTE на 90 ключей</div>
+ <h4>SHA / Chenot</h4>
+ <p style="font-size:13px;color:var(--ink-2)">Медицина среднего слоя, многодисциплинарный детокс</p>
+ <div class="pay-row">Годовой ФОТ ЕС: <span class="v">EUR 2 953 000</span></div>
+ <div class="pay-row">Годовой ФОТ РФ: <span class="v">271 648 000 RUB</span></div>
+ </div>
+ <div class="fte-card f-clp">
+ <div class="fte-num">81</div>
+ <div class="fte-lab">FTE на 90 ключей</div>
+ <h4>Lanserhof / CLP</h4>
+ <p style="font-size:13px;color:var(--ink-2)">Полная клиника, регенеративная медицина</p>
+ <div class="pay-row">Годовой ФОТ ЕС: <span class="v">EUR 3 883 000</span></div>
+ <div class="pay-row">Годовой ФОТ РФ: <span class="v">357 271 000 RUB</span></div>
+ </div></div>
+ <h3 class="reveal" style="margin-top:48px">Реестр 28 ролей</h3>
+ <p class="reveal" style="font-size:14px;color:var(--muted);margin-bottom:14px">Включает квалификации, FTE на каждый уровень, годовую зарплату в ЕС и в РФ, доступность на российском рынке. Поиск по всем столбцам через поле ниже.</p>
+ <div class="eq-static-wrap">
 <input type="text" class="eq-search" placeholder="Поиск ролей…" data-target="stStaticTable">
 <table class="eq-static-table st-static-table" id="stStaticTable">
 <thead><tr>
@@ -1043,8 +1047,8 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <th>ЕС EUR</th><th>РФ RUB</th><th>Доступность РФ</th>
 </tr></thead>
 <tbody><tr>
-<td><strong>Longevity Medical Director</strong></td>
-<td>Диплом врача со специализацией в регенеративной медицине, anti-aging медицине или терапии; предпочтительна сертификация A4M (American Academy of Anti-Aging Medicine) или IFM (Institute for Functional Medicine); клинический стаж от 15 лет; свободное владение клеточной биологией, включая сигнальные пути mTOR, AMPK, NAD+ и механизмы клеточного старения; приветствуются научные публикации.</td>
+<td><strong>Медицинский директор по longevity</strong></td>
+<td>Диплом врача со специализацией в регенеративной медицине, антивозрастной (anti-aging) медицине или терапии; предпочтительна сертификация A4M (American Academy of Anti-Aging Medicine) или IFM (Institute for Functional Medicine); клинический стаж от 15 лет; свободное владение клеточной биологией, включая сигнальные пути mTOR, AMPK, NAD+ и механизмы клеточного старения; приветствуются научные публикации.</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -1052,7 +1056,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">18 000 000</td>
 <td>Кадровый ресурс крайне ограничен. Источники кандидатов: ведущие врачи Сеченовского Первого МГМУ, медицинского факультета МГИМО, РНИМУ им. Пирогова; частные клиники Lechu, K+31, EMC, GMS Clinic, AtlasBiomed. Настоятельно рекомендуется привлечение экспатов из Израиля, Германии, ОАЭ, с Кипра и из Сербии. Найм экспатов после 2022 года затруднён; целесообразно рассматривать кандидатов с двойным гражданством (российско-израильское, российско-немецкое).</td>
 </tr><tr>
-<td><strong>Longevity Physician (Senior)</strong></td>
+<td><strong>Старший врач превентивной медицины</strong></td>
 <td>Диплом врача, сертификат специалиста по терапии или гериатрии; сертификация A4M или IFM; клинический стаж от 8 лет; уверенная интерпретация панелей биомаркеров (GlycanAge, TruDiagnostic, Galleri, орган-специфические эпигенетические часы старения).</td>
 <td class="eq-num">2</td>
 <td class="eq-num">1</td>
@@ -1061,7 +1065,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">11 000 000</td>
 <td>Дефицитная позиция. Лучшие кандидаты, по нашим оценкам, доступны в EMC, GMS, Lechu (Москва) и в Скандинавия Клиник (Санкт-Петербург). Реалистично закрыть 1-2 позиции в течение 12 месяцев; для дополнительной нагрузки целесообразна работа по locum-модели или приглашение приезжающих специалистов.</td>
 </tr><tr>
-<td><strong>Anti-aging / Regenerative Medicine Physician</strong></td>
+<td><strong>Врач антивозрастной (anti-aging) и регенеративной медицины</strong></td>
 <td>Диплом врача со специализацией в регенеративной медицине, экзосомной терапии и PRP, гормональной оптимизации; предпочтительна сертификация ISSAM или WOSAAM.</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -1070,7 +1074,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">9 500 000</td>
 <td>Умеренный кадровый пул в эстетической медицине; глубокие знания клеточной биологии встречаются редко. Потребуется переподготовка. Источники: Estelab, Frau Klinik, RHANA в Москве.</td>
 </tr><tr>
-<td><strong>Cardiologist (CPET-certified)</strong></td>
+<td><strong>Врач-кардиолог (с сертификацией CPET)</strong></td>
 <td>Диплом врача, сертификат специалиста по кардиологии; предпочтительна сертификация ESC; опыт интерпретации CPET (кардиопульмонального нагрузочного тестирования); понимание показателей VO2max, лактатного порога и вентиляторных порогов.</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -1079,7 +1083,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">10 500 000</td>
 <td>Достаточный кадровый пул кардиологов из НМИЦ им. Бакулева, НМИЦ им. Алмазова (Санкт-Петербург), НМИЦ кардиологии им. Чазова. Кардиологи с подготовкой по CPET встречаются реже; субспециализация по спортивной кардиологии развита слабо. Целесообразна переподготовка в рамках программ ESC по спортивной кардиологии.</td>
 </tr><tr>
-<td><strong>Endocrinologist (Hormone Optimisation)</strong></td>
+<td><strong>Врач-эндокринолог (оптимизация гормонального фона)</strong></td>
 <td>Диплом врача, сертификат специалиста по эндокринологии; опыт оптимизации функции щитовидной железы, надпочечников, половых гормонов; знакомство с пептидной терапией, протоколами агонистов GLP-1, осью IGF-1 / гормон роста.</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -1088,7 +1092,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">9 000 000</td>
 <td>Уверенный кадровый пул из НМИЦ эндокринологии (Москва), Сеченовского университета. Российская практика гормональной оптимизации (HRT, TRT) более консервативна; требуется врач, владеющий международными протоколами.</td>
 </tr><tr>
-<td><strong>Sports Medicine Physician</strong></td>
+<td><strong>Врач спортивной медицины</strong></td>
 <td>Диплом врача, специализация в спортивной медицине; предпочтительна подготовка по программам FIMS или ECSS; глубокие знания опорно-двигательного аппарата и физиологии физических нагрузок.</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -1097,7 +1101,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">7 500 000</td>
 <td>Кадровый ресурс приемлемый. Источники: РУСАДА, сеть спортивной медицины ФМБА, выпускники медицинских служб олимпийских сборных. Близость Сысерти к Екатеринбургу даёт преимущество (региональный центр спортивной медицины).</td>
 </tr><tr>
-<td><strong>Functional Medicine Physician</strong></td>
+<td><strong>Врач функциональной медицины</strong></td>
 <td>Диплом врача с сертификацией IFM или эквивалентной; компетенции в области микробиоты кишечника, пищевой непереносимости, экологической медицины, митохондриальной дисфункции.</td>
 <td class="eq-num">1</td>
 <td class="eq-num"></td>
@@ -1106,7 +1110,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">9 000 000</td>
 <td>Кадровый ресурс крайне ограничен. Функциональная медицина в России формально не признана. Поиск через частные клиники, в которых работают врачи с подготовкой IFM (по нашим оценкам, менее 50 человек по стране). Предпочтительно привлечение экспатов.</td>
 </tr><tr>
-<td><strong>IV Therapy Specialist Nurse (NAD+ trained)</strong></td>
+<td><strong>Медсестра IV-терапии (с подготовкой по NAD+)</strong></td>
 <td>Диплом медсестры со стажем работы от 5 лет; сертификат на проведение внутривенных инфузий; специализированная подготовка по инфузиям NAD+ (титрование дозы, купирование побочных эффектов); опыт работы с высокодозной инфузионной терапией витамином C, глутатионом, NAD+, а также с приготовлением пептидных растворов.</td>
 <td class="eq-num">5</td>
 <td class="eq-num">3</td>
@@ -1115,7 +1119,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">2 400 000</td>
 <td>Уверенный пул медсестёр, однако специализированная подготовка по NAD+ в России практически отсутствует. Необходимо запланировать внешнее обучение продолжительностью 4-6 недель (через партнёрства с Drip Hydration USA, Reviv Global, Get A Drip UK); обязательно наличие внутреннего протокола работы.</td>
 </tr><tr>
-<td><strong>Phlebotomist / Diagnostic Nurse</strong></td>
+<td><strong>Медсестра процедурного кабинета (флеботомист)</strong></td>
 <td>Среднее медицинское образование или диплом медсестры со стажем флеботомии от 3 лет; опыт расширенных заборов (50+ пробирок за сессию для лонжевити-панелей); навыки соблюдения холодовой цепи.</td>
 <td class="eq-num">3</td>
 <td class="eq-num">2</td>
@@ -1124,7 +1128,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">1 400 000</td>
 <td>Кадровый ресурс достаточный. Опора на выпускников Свердловского областного медицинского колледжа. Самая простая для локального найма позиция.</td>
 </tr><tr>
-<td><strong>Exercise Physiologist (CPET interpretation)</strong></td>
+<td><strong>Врач-физиолог нагрузок (интерпретация CPET)</strong></td>
 <td>Магистр (MSc) физиологии физических нагрузок или спортивной науки; аккредитация ACSM-EP-C или BASES; опыт интерпретации CPET, включая VO2max, вентиляторные пороги, анализ RER; компетенции в тестировании лактатного порога.</td>
 <td class="eq-num">3</td>
 <td class="eq-num">2</td>
@@ -1133,7 +1137,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">3 200 000</td>
 <td>Кадровый ресурс крайне ограничен. Сильная академическая база в спортивной науке (РГУФК, НГУ им. Лесгафта в Санкт-Петербурге), но мало практиков с опытом CPET в частном секторе. Источники: выпускники ФМБА и центров олимпийской подготовки; возможно дополнение ресурсами контрактных специалистов из ЕС.</td>
 </tr><tr>
-<td><strong>Strength and Conditioning Coach</strong></td>
+<td><strong>Тренер по силовой и общей физической подготовке</strong></td>
 <td>Бакалавр (BSc) спортивной науки или кинезиологии; аккредитация NSCA-CSCS или UKSCA; опыт работы с детренированным контингентом и с программами лонжевити-направленности (Zone 2, интервалы для развития VO2max, силовая работа для профилактики саркопении).</td>
 <td class="eq-num">4</td>
 <td class="eq-num">3</td>
@@ -1142,7 +1146,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">2 200 000</td>
 <td>Сильный кадровый пул в России (наследие советской спортивной науки); зрелый частный фитнес-сектор в Москве и Санкт-Петербурге. В Екатеринбурге также имеется приличная база специалистов.</td>
 </tr><tr>
-<td><strong>Pilates / Movement Therapist</strong></td>
+<td><strong>Инструктор по пилатесу и движенческой терапии</strong></td>
 <td>Сертифицированный инструктор по пилатесу (Polestar, Stott, BASI) с дополнительным сертификатом по скринингу движения (FMS, SFMA); предпочтителен опыт реабилитации.</td>
 <td class="eq-num">4</td>
 <td class="eq-num">3</td>
@@ -1151,7 +1155,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">1 900 000</td>
 <td>Сильный кадровый пул в Москве и Санкт-Петербурге; в Екатеринбурге кадры найти сложнее. Целесообразен ввоз 1-2 старших инструкторов и развитие местных специалистов.</td>
 </tr><tr>
-<td><strong>Sleep Specialist (PSG-certified)</strong></td>
+<td><strong>Врач-сомнолог (с сертификацией PSG)</strong></td>
 <td>Диплом врача или PhD с подготовкой в сомнологии; сертификат на интерпретацию полисомнографии (PSG); владение методиками когнитивно-поведенческой терапии бессонницы (CBT-I).</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -1160,7 +1164,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">8 500 000</td>
 <td>Кадровый ресурс ограничен. Основные источники подготовки: Федеральный центр сомнологии (Иваново) и Центр медицины сна Бузунова (Москва). Национальный пул, по оценкам, около 150 сертифицированных сомнологов.</td>
 </tr><tr>
-<td><strong>Sleep Technician</strong></td>
+<td><strong>Технолог сна</strong></td>
 <td>Сертификат медицинского техника; подготовка по подключению и мониторингу PSG (предпочтителен сертификат RPSGT или эквивалент BRPT).</td>
 <td class="eq-num">2</td>
 <td class="eq-num">1</td>
@@ -1169,7 +1173,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">1 300 000</td>
 <td>Возможна подготовка из числа выпускников региональных медицинских колледжей; целесообразно партнёрство с Центром Бузунова для отработки протоколов.</td>
 </tr><tr>
-<td><strong>Nutritionist (Longevity-trained)</strong></td>
+<td><strong>Нутрициолог (с подготовкой по longevity)</strong></td>
 <td>Магистр (MSc) в области нутрициологии или диетологии; подготовка по лонжевити-направлению (ZOE, Levels, Valter Longo Foundation, протокол Bredesen ReCODE); опыт интерпретации CGM (непрерывного мониторинга глюкозы); опыт построения персонализированного питания на основе геномных данных и данных о микробиоте.</td>
 <td class="eq-num">3</td>
 <td class="eq-num">2</td>
@@ -1178,7 +1182,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">2 800 000</td>
 <td>В России есть кадровый пул в диетологии (программы РУДН, РНИМУ), однако подспециализация по лонжевити развита слабо. В большинстве случаев потребуется переподготовка; целесообразно партнёрство с Valter Longo Foundation или ZOE.</td>
 </tr><tr>
-<td><strong>Clinical Dietitian</strong></td>
+<td><strong>Клинический диетолог</strong></td>
 <td>Сертифицированный диетолог; клинический опыт работы с заболеваниями ЖКТ, диабетом, аутоиммунными заболеваниями; действующая лицензия Roszdravnadzor.</td>
 <td class="eq-num">2</td>
 <td class="eq-num">1</td>
@@ -1187,7 +1191,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">1 900 000</td>
 <td>Кадровый ресурс достаточный. Местный пул из УГМУ (Уральский государственный медицинский университет, Екатеринбург).</td>
 </tr><tr>
-<td><strong>Fasting Protocol Coach</strong></td>
+<td><strong>Коуч по протоколам лечебного голодания</strong></td>
 <td>Диплом врача или сертифицированного диетолога с подготовкой в клиниках лечебного голодания (методики Buchinger Wilhelmi, ProLon, TrueNorth, школа доктора Goldhamer); компетенция медицинского сопровождения длительных голоданий.</td>
 <td class="eq-num">2</td>
 <td class="eq-num">1</td>
@@ -1196,16 +1200,16 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">2 600 000</td>
 <td>Нишевая позиция. Российские клиники в традиции Buchinger (наследие санаториев Горячего Ключа) дают частичный кадровый ресурс. Целесообразно направить 2 сотрудников в Buchinger Wilhelmi (Марбелья) на обучение продолжительностью 6-8 недель.</td>
 </tr><tr>
-<td><strong>Behavioural Change Specialist / Health Coach</strong></td>
+<td><strong>Специалист по поведенческим изменениям / коуч по здоровью</strong></td>
 <td>Сертификация NBHWC (National Board for Health and Wellness Coaching) или аккредитация ICF; образование в области психологии или поведенческих наук; подготовка по мотивационному интервьюированию.</td>
 <td class="eq-num">4</td>
 <td class="eq-num">3</td>
 <td class="eq-num">2</td>
 <td class="eq-num">55 000</td>
 <td class="eq-num">1 800 000</td>
-<td>Российский рынок коучинга зрелый в части бизнес-коучинга, однако подспециализация по health-коучингу развита слабо. Присутствие NBHWC в России практически отсутствует. Целесообразно партнёрство с игроками уровня Atlas Biomed либо найм коучей с аккредитацией ICF и их последующая переподготовка.</td>
+<td>Российский рынок коучинга зрелый в части бизнес-коучинга, однако подспециализация по коучингу здоровья развита слабо. Присутствие NBHWC в России практически отсутствует. Целесообразно партнёрство с игроками уровня Atlas Biomed либо найм коучей с аккредитацией ICF и их последующая переподготовка.</td>
 </tr><tr>
-<td><strong>Mindfulness / Meditation Teacher</strong></td>
+<td><strong>Преподаватель майндфулнесс и медитации</strong></td>
 <td>Сертификация MBSR (Mindfulness-Based Stress Reduction) или эквивалентная (UMass CFM, Oxford Mindfulness Centre); опыт преподавания от 5 лет; подготовка по травма-чувствительной практике.</td>
 <td class="eq-num">2</td>
 <td class="eq-num">2</td>
@@ -1214,7 +1218,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">1 800 000</td>
 <td>Приличный кадровый пул в Москве и Санкт-Петербурге (преподаватели йоги и медитативных студий); сертификация MBSR встречается редко. Целесообразно пригласить 1 старшего преподавателя из ЕС и развивать младший состав.</td>
 </tr><tr>
-<td><strong>Spa Therapist (Advanced Manual Therapy)</strong></td>
+<td><strong>SPA-терапевт (продвинутая мануальная терапия)</strong></td>
 <td>Диплом массажиста с дополнительными сертификатами по лимфодренажу (по методу Vodder), миофасциальному релизу, мануальному лимфодренажу, спортивному массажу.</td>
 <td class="eq-num">16</td>
 <td class="eq-num">12</td>
@@ -1223,7 +1227,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">1 500 000</td>
 <td>Сильная база по всей России. Кадровый пул Сысерти и Екатеринбурга достаточен; старших терапевтов с подготовкой по методу Vodder, возможно, придётся приглашать со стороны.</td>
 </tr><tr>
-<td><strong>Aesthetic Practitioner</strong></td>
+<td><strong>Косметолог-эстетист</strong></td>
 <td>Диплом врача или медсестры с сертификацией по эстетической медицине; опыт инъекционных процедур (ботулотоксин, дермальные филлеры), лазерных и RF-микронидлинг-процедур; владение протоколами SkinPen, Morpheus8, экзосомных косметических процедур.</td>
 <td class="eq-num">2</td>
 <td class="eq-num">2</td>
@@ -1232,7 +1236,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">4 500 000</td>
 <td>Сильный пул. Российский рынок эстетической медицины высокоразвит (Frau Klinik, RHANA, Estelab). Самая простая для найма позиция уровня старшего клинического персонала.</td>
 </tr><tr>
-<td><strong>Patient Coordinator (Medical-trained)</strong></td>
+<td><strong>Координатор пациентов (с медицинским образованием)</strong></td>
 <td>Среднее медицинское образование (медсестра или фельдшер) с дополнительной подготовкой в индустрии гостеприимства; владение языками (минимум русский и английский, желательно немецкий или китайский); уверенная работа с CRM и EHR-системами.</td>
 <td class="eq-num">6</td>
 <td class="eq-num">5</td>
@@ -1241,7 +1245,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">1 700 000</td>
 <td>Кадровый ресурс достаточный. Найм из числа выпускников Свердловского медицинского колледжа в сочетании с выпускниками школ гостеприимства; ограничивающий фактор, скорее, владение английским языком, а не медицинская подготовка.</td>
 </tr><tr>
-<td><strong>Lab Technician</strong></td>
+<td><strong>Лаборант</strong></td>
 <td>Высшее образование в области медицинской лабораторной диагностики; опыт работы с тестами высокой сложности; знакомство с лонжевити-панелями (аналоги Quest, Boston Heart, Cleveland Heart Lab); знание стандартов контроля качества и ISO 15189.</td>
 <td class="eq-num">4</td>
 <td class="eq-num">2</td>
@@ -1250,7 +1254,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">1 800 000</td>
 <td>Кадровый ресурс достаточный из регионального пула; для тестов высокой сложности целесообразно партнёрство с референс-лабораториями Invitro, Helix, KDL (Москва) и аутсорс наиболее специализированных исследований.</td>
 </tr><tr>
-<td><strong>Imaging Technologist (MRI / CT)</strong></td>
+<td><strong>Рентгенолаборант (МРТ / КТ)</strong></td>
 <td>Высшее образование по специальности рентгенология / лучевая диагностика; продвинутая сертификация по МРТ (1.5T / 3T) и КТ, включая коронарный кальциевый скрининг и низкодозную КТ лёгких; владение принципами ALARA по контролю дозовой нагрузки.</td>
 <td class="eq-num">3</td>
 <td class="eq-num">2</td>
@@ -1259,7 +1263,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">2 200 000</td>
 <td>Кадровый ресурс приемлемый, учитывая сильную региональную базу лучевой диагностики в Екатеринбурге (УГМУ, Свердловский областной онкодиспансер). Опыт работы с МРТ 7Т в России практически отсутствует; в случае установки аппарата 7Т необходимо запланировать обучение силами OEM-производителей (Siemens, GE).</td>
 </tr><tr>
-<td><strong>Radiologist (Reporting)</strong></td>
+<td><strong>Врач-рентгенолог (описание исследований)</strong></td>
 <td>Диплом врача, сертификат специалиста по рентгенологии; продвинутые компетенции в интерпретации кардио-МРТ, МРТ всего тела, низкодозной КТ лёгких; предпочтительно прохождение фелловшипа ESR или RSNA.</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -1268,7 +1272,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">11 500 000</td>
 <td>Уверенный кадровый пул, однако расширенная отчётность по лонжевити-протоколам (МРТ всего тела в формате Prenuvo / Ezra) требует переподготовки. Рекомендуется использование телерадиологии в формате партнёрства по второму чтению снимков с ЕС и США.</td>
 </tr><tr>
-<td><strong>Pharmacist (Compounding-trained)</strong></td>
+<td><strong>Провизор (с подготовкой по экстемпоральному изготовлению)</strong></td>
 <td>Высшее фармацевтическое образование; сертификат по стерильному изготовлению лекарственных форм (USP 797 / 800 или эквивалент); опыт приготовления инфузионных растворов, пептидных препаратов, BHRT-формуляций; действующая фармацевтическая лицензия Roszdravnadzor.</td>
 <td class="eq-num">2</td>
 <td class="eq-num">1</td>
@@ -1277,7 +1281,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">2 700 000</td>
 <td>Сегмент рецептурного изготовления (производственные аптеки) в России сокращается под давлением Roszdravnadzor; специализированный регуляторный путь существует, но громоздок. Целесообразен найм из санкт-петербургских производственных аптек либо оформление собственной лицензии (срок реализации 12-18 месяцев).</td>
 </tr><tr>
-<td><strong>Psychologist / Mental Performance Specialist</strong></td>
+<td><strong>Психолог / специалист по ментальной работоспособности</strong></td>
 <td>PhD или магистр (MSc) клинической психологии; подготовка по КПТ и ACT; знание психологии сна и физиологии стресса; компетенции в травма-информированном подходе.</td>
 <td class="eq-num">2</td>
 <td class="eq-num">2</td>
@@ -1286,7 +1290,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">3 500 000</td>
 <td>Сильный кадровый пул клинической психологии в Москве и Санкт-Петербурге; в Екатеринбурге доступна программа УрФУ. Практикующие специалисты со свободным английским встречаются редко.</td>
 </tr><tr>
-<td><strong>Hyperbaric Oxygen Therapy Technician</strong></td>
+<td><strong>Техник гипербарической оксигенотерапии (HBOT)</strong></td>
 <td>Среднее медицинское образование (медицинский техник) с сертификацией по эксплуатации барокамеры HBOT (UHMS или эквивалент); подготовка по технике безопасности.</td>
 <td class="eq-num">2</td>
 <td class="eq-num">1</td>
@@ -1295,59 +1299,59 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-num">1 700 000</td>
 <td>Нишевая позиция. Источники подготовки: военная и водолазная медицина (выпускники ФМБА, ВМФ). Кадровый ресурс достаточный.</td>
 </tr></tbody></table></div>
-    <div class="info-callout reveal">
-      <strong>Кадровый рынок России: пояснение.</strong> Старшие longevity, MD стоят 30, 50 процентов от EU, тарифа в РФ, это реальный арбитраж и единственное, на чём проект экономит. Скудный средний слой (NAD+ обученные IV, медсёстры, физиологи CPET, технологи сна, сертифицированные сенолитические терапевты) платится в РФ почти на уровне ЕС: дефицит выводит ставку на паритет. Чистая экономия концентрирована на врачебной верхушке, а не размазана по всему штатному расписанию.
-    </div>
-  </div>
+ <div class="info-callout reveal">
+ <strong>Кадровый рынок России: пояснение.</strong> Старшие longevity, MD стоят 30, 50 процентов от EU, тарифа в РФ, это реальный арбитраж и единственное, на чём проект экономит. Скудный средний слой (NAD+ обученные IV, медсёстры, физиологи CPET, технологи сна, сертифицированные сенолитические терапевты) платится в РФ почти на уровне ЕС: дефицит выводит ставку на паритет. Чистая экономия концентрирована на врачебной верхушке, а не размазана по всему штатному расписанию.
+ </div>
+ </div>
 </section>
 <section id="tiers">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">08, Три уровня</div></div>
-    <h2 class="reveal">Три жизнеспособных сценария</h2>
-    <p class="lede reveal">Все три уровня имеют общую базу: 90 ключей, кухня, IT, инфраструктура, базовый спа, фитнес. Они отличаются <em>глубиной медицины</em> и операционной экономикой. Six Senses Place, нижний предел инвестиции с longevity, совместимым позиционированием по биомаркер, ам. Lanserhof / CLP, верхний предел с регенеративной медициной и полной клиникой.</p>
-    <div class="tier-grid reveal">
-      <div class="tier-card tier-six">
-        <div class="badge">€5,8M</div>
-        <h3>Six Senses Place</h3>
-        <div class="sub">Wellness, плюс с longevity, биомаркер, ной глубиной</div>
-        <div class="row"><span>CapEx оборудование</span><span>EUR 4 362 000</span></div>
-        <div class="row"><span>Годовой ФОТ клиники</span><span>EUR 1 061 000</span></div>
-        <div class="row"><span>FTE</span><span>28</span></div>
-        <div class="row"><span>Программы</span><span>4 продукта</span></div>
-        <div class="row total-row"><span>Инвестиция, год 1</span><span>EUR 5 423 000</span></div>
-      </div>
-      <div class="tier-card tier-sha">
-        <div class="badge">€6,6M</div>
-        <h3>SHA / Chenot</h3>
-        <div class="sub">Медицина среднего слоя, мультидисциплинарный детокс</div>
-        <div class="row"><span>CapEx оборудование</span><span>EUR 6 612 500</span></div>
-        <div class="row"><span>Годовой ФОТ клиники</span><span>EUR 2 953 000</span></div>
-        <div class="row"><span>FTE</span><span>58</span></div>
-        <div class="row"><span>Программы</span><span>4 продукта</span></div>
-        <div class="row total-row"><span>Инвестиция, год 1</span><span>EUR 9 565 500</span></div>
-      </div>
-      <div class="tier-card tier-clp">
-        <div class="badge">€13,7M</div>
-        <h3>Lanserhof / CLP</h3>
-        <div class="sub">Полная клиника, регенеративная медицина</div>
-        <div class="row"><span>CapEx оборудование</span><span>EUR 13 730 500</span></div>
-        <div class="row"><span>Годовой ФОТ клиники</span><span>EUR 3 883 000</span></div>
-        <div class="row"><span>FTE</span><span>81</span></div>
-        <div class="row"><span>Программы</span><span>4 продукта</span></div>
-        <div class="row total-row"><span>Инвестиция, год 1</span><span>EUR 17 613 500</span></div>
-      </div>
-    </div>
-    <div class="info-callout reveal" style="margin-top:30px">
-      <strong>Прогноз выручки программ, общий для всех уровней.</strong> На пятый год ожидается EUR 27 млн (68.2 percent от общей выручки резорта). Программа реализуется в любом из трёх уровней; разница между уровнями, не в продукте, а в глубине клинической инфраструктуры, которую гость видит как обоснование цены.
-    </div>
-  </div>
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">08, Три уровня</div></div>
+ <h2 class="reveal">Три жизнеспособных сценария</h2>
+ <p class="lede reveal">Все три уровня имеют общую базу: 90 ключей, кухня, IT, инфраструктура, базовый спа, фитнес. Они отличаются <em>глубиной медицины</em> и операционной экономикой. Six Senses Place: нижний предел инвестиции с longevity-совместимым позиционированием по биомаркерам. Lanserhof / CLP, верхний предел с регенеративной медициной и полной клиникой.</p>
+ <div class="tier-grid reveal">
+ <div class="tier-card tier-six">
+ <div class="badge">€5,8M</div>
+ <h3>Six Senses Place</h3>
+ <div class="sub">Wellness-плюс с longevity-биомаркерной глубиной</div>
+ <div class="row"><span>CapEx оборудование</span><span>EUR 4 362 000</span></div>
+ <div class="row"><span>Годовой ФОТ клиники</span><span>EUR 1 061 000</span></div>
+ <div class="row"><span>FTE</span><span>28</span></div>
+ <div class="row"><span>Программы</span><span>4 продукта</span></div>
+ <div class="row total-row"><span>Инвестиция, год 1</span><span>EUR 5 423 000</span></div>
+ </div>
+ <div class="tier-card tier-sha">
+ <div class="badge">€6,6M</div>
+ <h3>SHA / Chenot</h3>
+ <div class="sub">Медицина среднего слоя, мультидисциплинарный детокс</div>
+ <div class="row"><span>CapEx оборудование</span><span>EUR 6 612 500</span></div>
+ <div class="row"><span>Годовой ФОТ клиники</span><span>EUR 2 953 000</span></div>
+ <div class="row"><span>FTE</span><span>58</span></div>
+ <div class="row"><span>Программы</span><span>4 продукта</span></div>
+ <div class="row total-row"><span>Инвестиция, год 1</span><span>EUR 9 565 500</span></div>
+ </div>
+ <div class="tier-card tier-clp">
+ <div class="badge">€13,7M</div>
+ <h3>Lanserhof / CLP</h3>
+ <div class="sub">Полная клиника, регенеративная медицина</div>
+ <div class="row"><span>CapEx оборудование</span><span>EUR 13 730 500</span></div>
+ <div class="row"><span>Годовой ФОТ клиники</span><span>EUR 3 883 000</span></div>
+ <div class="row"><span>FTE</span><span>81</span></div>
+ <div class="row"><span>Программы</span><span>4 продукта</span></div>
+ <div class="row total-row"><span>Инвестиция, год 1</span><span>EUR 17 613 500</span></div>
+ </div>
+ </div>
+ <div class="info-callout reveal" style="margin-top:30px">
+ <strong>Прогноз выручки программ, общий для всех уровней.</strong> На пятый год ожидается EUR 27 млн (68.2 percent от общей выручки резорта). Программа реализуется в любом из трёх уровней; разница между уровнями, не в продукте, а в глубине клинической инфраструктуры, которую гость видит как обоснование цены.
+ </div>
+ </div>
 </section>
 <section id="equipment">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">09, Полный реестр оборудования</div></div>
-    <h2 class="reveal">134 строки, привязанные к биологии</h2>
-    <p class="lede reveal">Каждая позиция реестра привязана к биологическому пути (или явно отмечена как чисто диагностическая / инфраструктурная), снабжена оценкой evidence (A: рандомизированные клинические испытания и mortality, signal; B: механика и наблюдательные данные; C: маркетинговые заявки или слабая база), и помечена как член стека гормезиса (Yes/No). Это даёт оператору моментальную карту: что покупаем за деньги и что возвращает биологию. Сортировка и многоуровневая фильтрация ниже.</p>
-    <div class="eq-static-wrap">
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">09, Полный реестр оборудования</div></div>
+ <h2 class="reveal">134 строки, привязанные к биологии</h2>
+ <p class="lede reveal">Каждая позиция реестра привязана к биологическому пути (или явно отмечена как чисто диагностическая / инфраструктурная), снабжена оценкой evidence (A: рандомизированные клинические испытания и mortality, signal; B: механика и наблюдательные данные; C: маркетинговые заявки или слабая база), и помечена как член стека гормезиса (да / нет). Это даёт оператору моментальную карту: что покупаем за деньги и что возвращает биология. Поиск по всем столбцам через поле ниже.</p>
+ <div class="eq-static-wrap">
 <input type="text" class="eq-search" placeholder="Поиск по реестру…" data-target="eqStaticTable">
 <table class="eq-static-table" id="eqStaticTable">
 <thead><tr>
@@ -1490,7 +1494,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td><strong>Расширенная панель биомаркеров на аутсорсе (LabCorp Whole Health / Quest Cardio IQ)</strong></td>
 <td>Лаборатория и биомаркеры</td>
 <td><span class="eq-tier-tag">Уровень Lanserhof / CLP</span></td>
-<td>LabCorp Whole Health (1000+ biomarkers), Quest Cardio IQ, Boston Heart Diagnostics</td>
+<td>LabCorp Whole Health (более 1000 биомаркеров), Quest Cardio IQ, Boston Heart Diagnostics</td>
 <td class="eq-num"></td>
 <td class="eq-num"></td>
 <td class="eq-num"></td>
@@ -1500,7 +1504,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 <td class="eq-ctr"><span class="eq-no">·</span></td>
 </tr><tr>
-<td><strong>Наборы тестирования эпигенетического возраста (аутсорс ,  TruDiagnostic / Clock Foundation)</strong></td>
+<td><strong>Наборы тестирования эпигенетического возраста (аутсорс, TruDiagnostic / Clock Foundation)</strong></td>
 <td>Лаборатория и биомаркеры</td>
 <td><span class="eq-tier-tag">Уровень Lanserhof / CLP</span></td>
 <td>TruDiagnostic TruAge Complete, Clock Foundation GrimAge, Elysium Index</td>
@@ -1555,7 +1559,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td><strong>Нагрузочное ЭКГ-исследование на тредмиле (полный комплекс)</strong></td>
 <td>Кардиология и пульмонология</td>
 <td><span class="eq-tier-tag">Уровень SHA / Chenot</span></td>
-<td>GE CASE V6.7 + T2100-ST treadmill, Schiller CARDIOVIT CS-200 Excellence + Trackmaster</td>
+<td>GE CASE V6.7 с беговой дорожкой T2100-ST; Schiller CARDIOVIT CS-200 Excellence с Trackmaster</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
 <td class="eq-num"></td>
@@ -1630,7 +1634,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B">B</span></td>
 <td class="eq-ctr"><span class="eq-no">·</span></td>
 </tr><tr>
-<td><strong>Лаборатория ПСГ ,  32-канальная система и спальня</strong></td>
+<td><strong>Лаборатория ПСГ, 32-канальная система и спальня</strong></td>
 <td>Сомнология и неврология</td>
 <td><span class="eq-tier-tag">Уровень Lanserhof / CLP</span></td>
 <td>Natus NicoletOne / Embla, Compumedics Grael, SOMNOmedics SOMNOscreen</td>
@@ -1672,7 +1676,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td><strong>Платформа когнитивного тестирования (по подписке / лицензии)</strong></td>
 <td>Сомнология и неврология</td>
 <td><span class="eq-tier-tag">Уровень Lanserhof / CLP</span></td>
-<td>Cambridge Cognition CANTAB, Creyos (formerly Cambridge Brain Sciences), Cogstate Brief Battery</td>
+<td>Cambridge Cognition CANTAB, Creyos (ранее Cambridge Brain Sciences), Cogstate Brief Battery</td>
 <td class="eq-num">1</td>
 <td class="eq-num"></td>
 <td class="eq-num"></td>
@@ -1721,7 +1725,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-C" title="C">C</span></td>
 <td class="eq-ctr"><span class="eq-no">·</span></td>
 </tr><tr>
-<td><strong>Аппарат IHHT ,  интервальная гипокси-гипероксическая тренировка</strong></td>
+<td><strong>Аппарат IHHT, интервальная гипокси-гипероксическая тренировка</strong></td>
 <td>Инфузионная терапия (IV-процедуры)</td>
 <td><span class="eq-tier-tag">Уровень Lanserhof / CLP</span></td>
 <td>Cellgym Pro / Lounge, Hypoxico Everest Summit II, GO2Altitude Biomedtech</td>
@@ -1802,7 +1806,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td><strong>Длительный ЭКГ-патч (парк Zio / KardiaMobile)</strong></td>
 <td>Кардиология и пульмонология</td>
 <td><span class="eq-tier-tag">Опциональная позиция</span></td>
-<td>iRhythm Zio XT (subscription), Bardy Diagnostics CAM, AliveCor KardiaMobile 6L</td>
+<td>iRhythm Zio XT (по подписке), Bardy Diagnostics CAM, AliveCor KardiaMobile 6L</td>
 <td class="eq-num"></td>
 <td class="eq-num"></td>
 <td class="eq-num"></td>
@@ -1851,7 +1855,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 <td class="eq-ctr"><span class="eq-no">·</span></td>
 </tr><tr>
-<td><strong>Барокамера ГБО ,  мягкая (1,3–1,5 ATA)</strong></td>
+<td><strong>Барокамера ГБО, мягкая (1,3–1,5 ATA)</strong></td>
 <td>Инфузионная терапия (IV-процедуры)</td>
 <td><span class="eq-tier-tag">Уровень Lanserhof / CLP</span></td>
 <td>OxyHealth Vitaeris 320, Hyperbaric Centrales OxyVita, Summit to Sea Dive</td>
@@ -1945,7 +1949,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td><strong>Анализатор состава тела медицинского класса (биоимпеданс, многочастотный)</strong></td>
 <td>Состав тела и спортивная диагностика</td>
 <td><span class="eq-tier-tag">Уровень SHA / Chenot</span></td>
-<td>InBody 970 / Seca mBCA 555 (medical-grade)</td>
+<td>InBody 970 / Seca mBCA 555 (медицинского класса)</td>
 <td class="eq-num">2</td>
 <td class="eq-num">2</td>
 <td class="eq-num"></td>
@@ -1955,7 +1959,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-B" title="B">B</span></td>
 <td class="eq-ctr"><span class="eq-no">·</span></td>
 </tr><tr>
-<td><strong>BodPod GS-X ,  воздушная плетизмография</strong></td>
+<td><strong>BodPod GS-X, воздушная плетизмография</strong></td>
 <td>Состав тела и спортивная диагностика</td>
 <td><span class="eq-tier-tag">Уровень Six Senses Place</span></td>
 <td>Cosmed BodPod GS-X</td>
@@ -2153,7 +2157,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td><strong>Соляная комната / пещера для галотерапии (под ключ)</strong></td>
 <td>Гидротерапия и спа</td>
 <td><span class="eq-tier-tag">Уровень Six Senses Place</span></td>
-<td>Halogenerator + Himalayan salt walls (custom)</td>
+<td>Галогенератор + стены из гималайской соли (кастом)</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -2179,7 +2183,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td><strong>Контур Кнейпа (контрастные ножные ванны)</strong></td>
 <td>Гидротерапия и спа</td>
 <td><span class="eq-tier-tag">Уровень Six Senses Place</span></td>
-<td>Custom build, Klafs/Hoesch fittings</td>
+<td>Кастомная сборка, фурнитура Klafs / Hoesch</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -2293,7 +2297,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-A" title="A">A</span></td>
 <td class="eq-ctr"><span class="eq-yes">✓</span></td>
 </tr><tr>
-<td><strong>Премиум русская баня ,  парная (на дровах, бревенчатая, под ключ)</strong></td>
+<td><strong>Премиум русская баня, парная (на дровах, бревенчатая, под ключ)</strong></td>
 <td>Криотерапия и термальные процедуры</td>
 <td><span class="eq-tier-tag">Уровень Six Senses Place</span></td>
 <td>SEVERNO Valgar / Hamam-Elit / regional Ural artisans / Klafs Banya line</td>
@@ -2309,7 +2313,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td><strong>Чёрная баня (по-чёрному, традиционная)</strong></td>
 <td>Криотерапия и термальные процедуры</td>
 <td><span class="eq-tier-tag">Уровень Six Senses Place</span></td>
-<td>Custom artisan build (regional Ural specialists)</td>
+<td>Кастомная ручная сборка (региональные уральские мастера)</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
@@ -2842,7 +2846,7 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td><strong>Специализированная пациентская / wellness-платформа для longevity</strong></td>
 <td>ИТ-инфраструктура, МИС и пациентское ПО</td>
 <td><span class="eq-tier-tag">Уровень SHA / Chenot</span></td>
-<td>Function Health (B2B), Hone Health, Healthspan; alt: custom</td>
+<td>Function Health (B2B), Hone Health, Healthspan; альт.: кастомная разработка</td>
 <td class="eq-num">1</td>
 <td class="eq-num">1</td>
 <td class="eq-num"></td>
@@ -3099,67 +3103,61 @@ footer .meta{margin-top:30px;border-top:1px solid rgba(212,185,136,0.25);padding
 <td class="eq-ctr"><span class="eq-evid eq-evid-C" title="C">C</span></td>
 <td class="eq-ctr"><span class="eq-no">·</span></td>
 </tr></tbody></table></div>
-  </div>
+ </div>
 </section>
 <section id="payback">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">10, Окупаемость</div></div>
-    <h2 class="reveal">Окупаемость и логика выручки</h2>
-    <p class="lede reveal">Базовые допущения: 90 ключей, загрузка 65 процентов на пятый год, средняя продолжительность гостевого заезда 10 ночей, FX 92 RUB/EUR, 320 операционных дней в году. На основе якорных EU, цен Lanserhof и Chenot мы откалибровали российские прайсы на уровне 50, 65 процентов от EUR, эквивалента, что согласуется с эластичностью местного спроса.</p>
-    <div class="callout-grid reveal">
-      <div class="callout"><div class="num">EUR 27 млн</div><div class="lab">выручка программ, год 5</div><p>1 281 гость, программ в год при средней цене EUR 21 100. Маржа сегмента 49, 64 процента в зависимости от программы.</p></div>
-      <div class="callout"><div class="num">EUR 12,6 млн</div><div class="lab">остаток выручки</div><p>Без, программные гости, ресторан, день, спа, ритейл, корпоративные дни и членства. Дополняет программный слой до полной выручки EUR 39,6 млн.</p></div>
-      <div class="callout"><div class="num">3,5, 5,5 года</div><div class="lab">payback по уровням</div><p>Six Senses, 3,5 года; SHA/Chenot, 4,2 года; Lanserhof / CLP, 5,5 лет. EBITDA, 28, 35 процентов в зависимости от микса гостей.</p></div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">10, Окупаемость</div></div>
+ <h2 class="reveal">Окупаемость и логика выручки</h2>
+ <p class="lede reveal">Базовые допущения: 90 ключей, загрузка 65 процентов на пятый год, средняя продолжительность гостевого заезда 10 ночей, FX 92 RUB/EUR, 320 операционных дней в году. На основе якорных EU, цен Lanserhof и Chenot мы откалибровали российские прайсы на уровне 50, 65 процентов от EUR, эквивалента, что согласуется с эластичностью местного спроса.</p>
+ <div class="callout-grid reveal">
+ <div class="callout"><div class="num">EUR 27 млн</div><div class="lab">выручка программ, год 5</div><p>1 281 гость, программ в год при средней цене EUR 21 100. Маржа сегмента 49, 64 процента в зависимости от программы.</p></div>
+ <div class="callout"><div class="num">EUR 12,6 млн</div><div class="lab">остаток выручки</div><p>Без, программные гости, ресторан, день, спа, ритейл, корпоративные дни и членства. Дополняет программный слой до полной выручки EUR 39,6 млн.</p></div>
+ <div class="callout"><div class="num">3,5, 5,5 года</div><div class="lab">payback по уровням</div><p>Six Senses, 3,5 года; SHA/Chenot, 4,2 года; Lanserhof / CLP, 5,5 лет. EBITDA, 28, 35 процентов в зависимости от микса гостей.</p></div>
+ </div>
+ </div>
 </section>
 <section id="regional">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">11, Регионы</div></div>
-    <h2 class="reveal">Региональные драйверы стоимости</h2>
-    <p class="lede reveal">CapEx в РФ зависит от логистики (морской, ж/д, авто), таможни, конвертации FX, шеф, монтажа европейскими инженерами и от страховой надбавки. Уровень плюс 18, 25 процентов к EU, прайсу, типичная отметка для крупного медицинского оборудования с европейским сервисом.</p>
-    <table class="simple-table reveal">
-      <thead><tr><th>Регион</th><th>Индекс стоимости</th><th>Логистика</th></tr></thead>
-      <tbody><tr>
-          <td><strong>Западная Европа</strong></td>
-          <td>Западная Европа (Германия, Швейцария, Австрия, Италия, Франция, Испания) выступает фактическим базисом OEM-цен для основных производителей медицинского и спа-оборудования сегмента longevity-резортов: Siemens Healthineers, GE HealthCare (про</td>
-          <td>Возмещение НДС обычно доступно юридическим лицам с медицинской лицензией (Германия ,  19%, Австрия ,  20%, Швейцария ,  8,1%, Испания ,  21%, Италия ,  22%). Для медицинских изделий обязательна маркир</td>
-        </tr><tr>
-          <td><strong>Северная Америка</strong></td>
-          <td>Долларовые прайс-листы для лучевой диагностики и лабораторного оборудования обычно на 10–20% выше европейских по паритету (до пересчёта валют); по спа- и эстетическому оборудованию разрыв составляет 5–15%. Это связано с более высокими дилер</td>
-          <td>Налог с продаж штатов ,  0–9,5%. Тарифные риски на 2024–2026 повышены (ввозные пошлины Section 301 на Китай затрагивают УЗИ Mindray / Edan, часть линейки Technogym, собранной в Азии). Соответствие HIP</td>
-        </tr><tr>
-          <td><strong>Азия</strong></td>
-          <td></td>
-          <td>Оборудование азиатского производства (УЗИ Mindray, УЗИ Samsung, сомнодиагностика BMC) всё чаще используется в России в качестве замещения после 2022 года. ОАЭ превратились в хаб параллельного импорта </td>
-        </tr><tr>
-          <td><strong>Россия</strong></td>
-          <td></td>
-          <td></td>
-        </tr></tbody>
-    </table>
-  </div>
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">11, Регионы</div></div>
+ <h2 class="reveal">Региональные драйверы стоимости</h2>
+ <p class="lede reveal">CapEx в РФ зависит от логистики (морской, ж/д, авто), таможни, конвертации FX, шеф, монтажа европейскими инженерами и от страховой надбавки. Уровень плюс 18, 25 процентов к EU, прайсу, типичная отметка для крупного медицинского оборудования с европейским сервисом.</p>
+ <table class="simple-table reveal">
+ <thead><tr><th>Регион</th><th>Индекс стоимости</th><th>Логистика</th></tr></thead>
+ <tbody><tr>
+ <td><strong>Западная Европа</strong></td>
+ <td>Западная Европа (Германия, Швейцария, Австрия, Италия, Франция, Испания) выступает фактическим базисом OEM-цен для основных производителей медицинского и спа-оборудования сегмента longevity-резортов: Siemens Healthineers, GE HealthCare (про</td>
+ <td>Возмещение НДС обычно доступно юридическим лицам с медицинской лицензией (Германия, 19%, Австрия, 20%, Швейцария, 8,1%, Испания, 21%, Италия, 22%). Для медицинских изделий обязательна маркир</td>
+ </tr><tr>
+ <td><strong>Северная Америка</strong></td>
+ <td>Долларовые прайс-листы для лучевой диагностики и лабораторного оборудования обычно на 10–20% выше европейских по паритету (до пересчёта валют); по спа- и эстетическому оборудованию разрыв составляет 5–15%. Это связано с более высокими дилер</td>
+ <td>Налог с продаж штатов, 0–9,5%. Тарифные риски на 2024–2026 повышены (ввозные пошлины Section 301 на Китай затрагивают УЗИ Mindray / Edan, часть линейки Technogym, собранной в Азии). Соответствие HIP</td>
+ </tr><tr>
+ <td><strong>Азия</strong></td>
+ <td></td>
+ <td>Оборудование азиатского производства (УЗИ Mindray, УЗИ Samsung, сомнодиагностика BMC) всё чаще используется в России в качестве замещения после 2022 года. ОАЭ превратились в хаб параллельного импорта </td>
+ </tr><tr>
+ <td><strong>Россия</strong></td>
+ <td></td>
+ <td></td>
+ </tr></tbody>
+ </table>
+ </div>
 </section>
 <section id="methodology">
-  <div class="container">
-    <div class="section-eyebrow reveal"><div class="line"></div><div class="num">12, Методология</div></div>
-    <h2 class="reveal">Источники и методология</h2>
-    <p class="lede reveal">Документ опирается на 56 первичных источников: прайсы вендоров (Siemens Healthineers, GE HealthCare, Philips, Klafs, Tylo, Eleiko, Technogym), академическая литература (PubMed, Cell Reports, Aging Cell, JAMA), отраслевые отчёты (Global Wellness Institute, Skift, McKinsey Wellness), и финансовые раскрытия операторов (Lanserhof, SHA, Chenot, Six Senses). Биологические тэги и оценки evidence присвоены по шкале A/B/C на основе мета, анализов и RCT, обзоров. Биомаркер, ный пакет следует консенсусу 2024 года (David Sinclair, Eric Verdin, Steve Horvath, Morgan Levine). Прогноз выручки построен снизу вверх по микс, гостей, ценнику программ и оценочной марже.</p>
-  </div>
+ <div class="container">
+ <div class="section-eyebrow reveal"><div class="line"></div><div class="num">12, Методология</div></div>
+ <h2 class="reveal">Источники и методология</h2>
+ <p class="lede reveal">Документ опирается на 56 первичных источников: прайсы вендоров (Siemens Healthineers, GE HealthCare, Philips, Klafs, Tylo, Eleiko, Technogym), академическая литература (PubMed, Cell Reports, Aging Cell, JAMA), отраслевые отчёты (Global Wellness Institute, Skift, McKinsey Wellness), и финансовые раскрытия операторов (Lanserhof, SHA, Chenot, Six Senses). Биологические тэги и оценки evidence присвоены по шкале A/B/C на основе мета, анализов и RCT, обзоров. Биомаркерный пакет следует консенсусу 2024 года (David Sinclair, Eric Verdin, Steve Horvath, Morgan Levine). Прогноз выручки построен снизу вверх по микс-гостей, ценнику программ и оценочной марже.</p>
+ </div>
 </section>
 <footer>
-  <div class="container">
-    <div>
-      <h4>Sapir Group</h4>
-      <p>Стратегия, инвестиционная аналитика и операционный консалтинг для премиальных проектов в сфере здоровья и долголетия.</p>
-    </div>
-    <div>
-      <h4>Контакт проекта</h4>
-      <p>david.sapir@gmail.com<br>Москва, Сысерть, Дубай</p>
-      <p style="margin-top:14px;font-size:12px;color:var(--gold-soft)">Документ имеет конфиденциальный характер и подготовлен для внутреннего инвестиционного обсуждения.</p>
-    </div>
-    <div class="meta" style="grid-column:1/-1">МАЙ 2026 · ВЕРСИЯ 2 С БИОЛОГИЧЕСКИМ СЛОЕМ · 90 КЛЮЧЕЙ · СВЕРДЛОВСКАЯ ОБЛ. РФ</div>
-  </div>
+ <div class="container">
+ <div class="meta" style="grid-column:1/-1;text-align:center">
+ <p style="font-size:12px;color:var(--gold-soft);margin-bottom:10px">Документ имеет конфиденциальный характер и подготовлен для внутреннего инвестиционного обсуждения.</p>
+ МАЙ 2026 · ВЕРСИЯ 2 С БИОЛОГИЧЕСКИМ СЛОЕМ · 90 КЛЮЧЕЙ · СВЕРДЛОВСКАЯ ОБЛ. РФ
+ </div>
+ </div>
 </footer>
 
 <script>
