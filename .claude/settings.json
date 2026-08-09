@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Skill check: before starting this task, invoke the find-skills skill to find the best skill for the task (check installed skills first, then the skills.sh registry via `npx skills find <keywords>`). Use the best match if one exists; if none fits, proceed normally. Skip this check for trivial conversational replies.'"
+          }
+        ]
+      }
+    ]
+  }
+}
